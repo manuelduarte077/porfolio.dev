@@ -96,15 +96,14 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>2017</BioYear>
+          Born in Bilwi.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
+          <BioYear>2019</BioYear>
           Completed the Master&apos;s Program in the Graduate School of
           Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
+          </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
           Worked at NetsSoftNic! Nicaraguan
@@ -189,6 +188,7 @@ const Home = () => (
             </Button>
           </NextLink>
         </Box>
+
       </Section>
     </Container>
   </Layout>
