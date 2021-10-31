@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier -write .",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "keywords": [],
   "author": "Takuya Matsuyama",
@@ -25,6 +26,7 @@
     "three": "^0.133.1"
   },
   "devDependencies": {
+    "cypress": "^8.7.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
     "prettier": "^2.4.1"
