@@ -1,7 +1,7 @@
 {
   "name": "craftzdog-homepage",
   "version": "1.0.0",
-  "description": "Takuya's website",
+  "description": "Manue'l website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
@@ -11,7 +11,7 @@
     "cypress": "cypress open"
   },
   "keywords": [],
-  "author": "Takuya Matsuyama",
+  "author": "Manuel Duarte",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
