@@ -37,15 +37,15 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Hello, I&apos;m a mobile developer based in Nicaraguan!
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Manuel Duarte
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Digital Craftsman ( Developer / Teacher / Designer )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -106,12 +106,12 @@ const Home = () => (
           (奈良先端科学技術大学院大学情報科学研究科修士課程)
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2021</BioYear>
+          Worked at NetsSoftNic! Nicaraguan
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2021 to present</BioYear>
+          I work at NetsSoftNic and Works as a freelance
         </BioSection>
       </Section>
 
@@ -138,13 +138,13 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/manuelduarte077" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
-                @craftzdog
+                @manuelduarte077
               </Button>
             </Link>
           </ListItem>
