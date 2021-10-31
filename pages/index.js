@@ -110,8 +110,8 @@ const Home = () => (
           Worked at NetsSoftNic! Nicaraguan
         </BioSection>
         <BioSection>
-          <BioYear>2021 to present</BioYear>
-          I work at NetsSoftNic and Works as a freelance
+          <BioYear>2021 to present</BioYear>I work at NetsSoftNic and Works as a
+          freelance
         </BioSection>
       </Section>
 
@@ -119,17 +119,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
+        <Paragraph>Coding, Music, Machine Learning, IA</Paragraph>
       </Section>
 
       <Section delay={0.3}>
@@ -148,52 +138,33 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
+          
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/manuelduarte077" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
-                @inkdrop_app
+                @manuelduarte077
               </Button>
             </Link>
           </ListItem>
+
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/manuelduarte077" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://discord.gg/QfsG5Kj" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoDiscord} />}
-              >
-                Discord
+                @manuelduarte077
               </Button>
             </Link>
           </ListItem>
         </List>
 
+      
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://www.youtube.com/devaslife"
