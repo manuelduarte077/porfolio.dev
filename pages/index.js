@@ -18,13 +18,8 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import {
-  IoLogoTwitter,
-  IoLogoInstagram,
-  IoLogoGithub,
-  IoLogoDiscord
-} from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+// import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
 const Home = () => (
@@ -103,7 +98,7 @@ const Home = () => (
           <BioYear>2019</BioYear>
           Completed the Master&apos;s Program in the Graduate School of
           Information Science at Nara Institute of Science and Technology
-          </BioSection>
+        </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
           Worked at NetsSoftNic! Nicaraguan
@@ -137,7 +132,7 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
-          
+
           <ListItem>
             <Link href="https://twitter.com/manuelduarte077" target="_blank">
               <Button
@@ -162,16 +157,15 @@ const Home = () => (
             </Link>
           </ListItem>
         </List>
-
-      
+       
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
+           {/* <GridItem
             href="https://www.youtube.com/devaslife"
             title="Dev as Life"
             thumbnail={thumbYouTube}
           >
             My YouTube channel
-          </GridItem>
+          </GridItem>*/}
           <GridItem
             href="https://www.inkdrop.app/"
             title="Inkdrop"
@@ -179,7 +173,7 @@ const Home = () => (
           >
             A Markdown note-taking app
           </GridItem>
-        </SimpleGrid>
+        </SimpleGrid> 
 
         <Box align="center" my={4}>
           <NextLink href="/posts">
@@ -188,7 +182,6 @@ const Home = () => (
             </Button>
           </NextLink>
         </Box>
-
       </Section>
     </Container>
   </Layout>
