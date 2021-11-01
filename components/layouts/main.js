@@ -24,7 +24,7 @@ const Main = ({ children, router }) => {
         <meta name="twitter:site" content="@craftzdog" />
         <meta name="twitter:creator" content="@craftzdog" />
         <meta name="twitter:image" content="/card.png" />
-        <meta property="og:site_name" content="Takuya Matsuyama's Homepage" />
+        <meta property="og:site_name" content="Manuel Duarte Homepage" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
         <title>Takuya Matsuyama - Homepage</title>
@@ -34,9 +34,7 @@ const Main = ({ children, router }) => {
 
       <Container maxW="container.md" pt={14}>
         <LazyVoxelDog />
-
         {children}
-
         <Footer />
       </Container>
     </Box>

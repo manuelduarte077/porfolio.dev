@@ -21,12 +21,14 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        
         <Section>
           <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
             A Markdown note-taking app with 100+ plugins, cross-platform and
             encrypted data sync support
           </WorkGridItem>
         </Section>
+
         <Section>
           <WorkGridItem
             id="walknote"
@@ -37,22 +39,6 @@ const Works = () => (
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.1}>
-          <WorkGridItem
-            id="fourpainters"
-            title="The four painters"
-            thumbnail={thumbFourPainters}
-          >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
-          </WorkGridItem>
-        </Section>
       </SimpleGrid>
 
       <Section delay={0.2}>
