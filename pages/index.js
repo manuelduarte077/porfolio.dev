@@ -19,7 +19,6 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-// import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
 const Home = () => (
@@ -66,16 +65,8 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop">
-            <Link>Inkdrop</Link>
-          </NextLink>
-          .
+          Manuel is a freelance and a full-stack developer based in Bilwi with a
+          passion for building digital services/stuff he wants.{' '}
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
@@ -158,12 +149,10 @@ const Home = () => (
           </ListItem>
         </List>
 
-
         <Heading as="h3" variant="section-title">
-            Projects
-          </Heading>
+          Projects
+        </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-
           <GridItem
             href="https://www.inkdrop.app/"
             title="Inkdrop"
@@ -179,7 +168,6 @@ const Home = () => (
           >
             A Markdown note-taking app
           </GridItem>
-
         </SimpleGrid>
 
         <Box align="center" my={4}>
