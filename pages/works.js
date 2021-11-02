@@ -7,8 +7,6 @@ import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
 import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
 import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -18,7 +16,6 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        
         <Section>
           <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
             A Markdown note-taking app with 100+ plugins, cross-platform and
@@ -35,7 +32,6 @@ const Works = () => (
             Music recommendation app for iOS
           </WorkGridItem>
         </Section>
-
       </SimpleGrid>
 
       <Section delay={0.2}>
@@ -63,6 +59,7 @@ const Works = () => (
         </Section>
       </SimpleGrid>
 
+      {/* This is the section for old projects but as I have it will be commented */}
       <Section delay={0.4}>
         <Divider my={6} />
 
@@ -72,12 +69,7 @@ const Works = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
-            Twitter client app for iPhone Safari
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.5}>
+        {/* <Section delay={0.5}>
           <WorkGridItem
             id="freedbtagger"
             thumbnail={thumbFreeDBTagger}
@@ -85,9 +77,7 @@ const Works = () => (
           >
             Automatic audio file tagging tool using FreeDB for Windows
           </WorkGridItem>
-        </Section>
-
-
+        </Section> */}
       </SimpleGrid>
     </Container>
   </Layout>
