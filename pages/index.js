@@ -39,7 +39,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Manuel Duarte
           </Heading>
-          <p>Digital Craftsman ( Developer / Teacher / Designer )</p>
+          <p>Digital Craftsman ( Developer / Teacher / Crypto )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -65,7 +65,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Manuel is a freelance and a full-stack developer based in Bilwi with a
+          Manuel is a freelance and a mobile developer based in Bilwi with a
           passion for building digital services/stuff he wants.{' '}
         </Paragraph>
         <Box align="center" my={4}>
@@ -104,7 +104,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
-        <Paragraph>Coding, Music, Machine Learning, IA</Paragraph>
+        <Paragraph>Coding, Playing Fifa, Music, IA</Paragraph>
       </Section>
 
       <Section delay={0.3}>

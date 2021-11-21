@@ -4,10 +4,9 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
 import thumbFishWorkflow from '../public/images/posts/golang.jpg'
-import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
 import thumb003Docker from '../public/images/posts/docker.jpg'
-import thumbFinancialGoal from '../public/images/contents/blog-financial-goal.png'
-import thumbHowToPriceYourself from '../public/images/contents/blog-how-to-price-yourself.jpg'
+import thumbFirebase from '../public/images/posts/firebase.jpg'
+import thumbHowTwoPython from '../public/images/posts/python-2.jpg'
 import thumb50xPython from '../public/images/posts/python.jpg'
 
 const Posts = () => (
@@ -20,14 +19,9 @@ const Posts = () => (
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="My desk setup (Late 2020)"
-            thumbnail={thumbMyDeskSetup}
-            href="https://www.youtube.com/watch?v=1OFDMwDlnOE"
-          />
-          <GridItem
-            title="Learn Go in 8 minutes"
-            thumbnail={thumbFishWorkflow}
-            href="https://dev.to/manuelduarte077/learn-go-in-8-minutes-59ph"
+            title="Tuplas en Python (tuple)"
+            thumbnail={thumbHowTwoPython}
+            href="https://manuelduarte077.medium.com/tupla-tuple-9e303b6e6c60"
           />
         </SimpleGrid>
       </Section>
@@ -35,14 +29,14 @@ const Posts = () => (
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="How to Price Yourself as a Freelance Developer"
-            thumbnail={thumbHowToPriceYourself}
-            href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
+            title="Learn Go in 8 minutes"
+            thumbnail={thumbFishWorkflow}
+            href="https://dev.to/manuelduarte077/learn-go-in-8-minutes-59ph"
           />
           <GridItem
-            title="I stopped setting a financial goal for my SaaS"
-            thumbnail={thumbFinancialGoal}
-            href="https://blog.inkdrop.app/i-stopped-setting-a-financial-goal-for-my-saas-a92c3db65506"
+            title="¿Como hacer un Deploy a Firebase Hosting?"
+            thumbnail={thumbFirebase}
+            href="https://dev.to/manuelduarte077/como-hacer-un-deploy-a-firebase-hosting-1d1j"
           />
         </SimpleGrid>
       </Section>
