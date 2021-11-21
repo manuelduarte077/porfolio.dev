@@ -8,7 +8,7 @@ import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jp
 import thumb003Docker from '../public/images/posts/docker.jpg'
 import thumbFinancialGoal from '../public/images/contents/blog-financial-goal.png'
 import thumbHowToPriceYourself from '../public/images/contents/blog-how-to-price-yourself.jpg'
-import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg'
+import thumb50xPython from '../public/images/posts/python.jpg'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -55,9 +55,9 @@ const Posts = () => (
             href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
           />
           <GridItem
-            title="I made my React Native app 50x faster"
-            thumbnail={thumb50xFaster}
-            href="https://www.youtube.com/watch?v=vj723NlrIQc"
+            title="Diccionarios en Python"
+            thumbnail={thumb50xPython}
+            href="https://dev.to/manuelduarte077/diccionarios-en-python-4h3n"
           />
         </SimpleGrid>
       </Section>
