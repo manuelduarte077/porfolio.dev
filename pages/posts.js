@@ -20,14 +20,14 @@ const Posts = () => (
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="Learn Go in 8 minutes"
-            thumbnail={thumbFishWorkflow}
-            href="https://dev.to/manuelduarte077/learn-go-in-8-minutes-59ph"
-          />
-          <GridItem
             title="My desk setup (Late 2020)"
             thumbnail={thumbMyDeskSetup}
             href="https://www.youtube.com/watch?v=1OFDMwDlnOE"
+          />
+          <GridItem
+            title="Learn Go in 8 minutes"
+            thumbnail={thumbFishWorkflow}
+            href="https://dev.to/manuelduarte077/learn-go-in-8-minutes-59ph"
           />
         </SimpleGrid>
       </Section>
@@ -35,9 +35,9 @@ const Posts = () => (
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="Instalación de Docker en Ubuntu"
-            thumbnail={thumb003Docker}
-            href="https://dev.to/manuelduarte077/instalacion-de-docker-en-ubuntu-4mhf"
+            title="How to Price Yourself as a Freelance Developer"
+            thumbnail={thumbHowToPriceYourself}
+            href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
           />
           <GridItem
             title="I stopped setting a financial goal for my SaaS"
@@ -50,9 +50,9 @@ const Posts = () => (
       <Section delay={0.5}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="How to Price Yourself as a Freelance Developer"
-            thumbnail={thumbHowToPriceYourself}
-            href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
+            title="Instalación de Docker en Ubuntu"
+            thumbnail={thumb003Docker}
+            href="https://dev.to/manuelduarte077/instalacion-de-docker-en-ubuntu-4mhf"
           />
           <GridItem
             title="Diccionarios en Python"
