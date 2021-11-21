@@ -3,12 +3,12 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import thumbFishWorkflow from '../public/images/contents/youtube-fish-workflow.jpg'
+import thumbFishWorkflow from '../public/images/posts/golang.jpg'
 import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
-import thumb500PaidUsers from '../public/images/contents/blog-500-paid-users.jpg'
+import thumb003Docker from '../public/images/posts/docker.jpg'
 import thumbFinancialGoal from '../public/images/contents/blog-financial-goal.png'
 import thumbHowToPriceYourself from '../public/images/contents/blog-how-to-price-yourself.jpg'
-import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg'
+import thumb50xPython from '../public/images/posts/python.jpg'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -20,9 +20,9 @@ const Posts = () => (
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="My Fish workflow"
+            title="Learn Go in 8 minutes"
             thumbnail={thumbFishWorkflow}
-            href="https://www.youtube.com/watch?v=KKxhf50FIPI"
+            href="https://dev.to/manuelduarte077/learn-go-in-8-minutes-59ph"
           />
           <GridItem
             title="My desk setup (Late 2020)"
@@ -35,9 +35,9 @@ const Posts = () => (
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="How I’ve Attracted The First 500 Paid Users For My SaaS That Costs $5/mo"
-            thumbnail={thumb500PaidUsers}
-            href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820"
+            title="Instalación de Docker en Ubuntu"
+            thumbnail={thumb003Docker}
+            href="https://dev.to/manuelduarte077/instalacion-de-docker-en-ubuntu-4mhf"
           />
           <GridItem
             title="I stopped setting a financial goal for my SaaS"
@@ -55,9 +55,9 @@ const Posts = () => (
             href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
           />
           <GridItem
-            title="I made my React Native app 50x faster"
-            thumbnail={thumb50xFaster}
-            href="https://www.youtube.com/watch?v=vj723NlrIQc"
+            title="Diccionarios en Python"
+            thumbnail={thumb50xPython}
+            href="https://dev.to/manuelduarte077/diccionarios-en-python-4h3n"
           />
         </SimpleGrid>
       </Section>
