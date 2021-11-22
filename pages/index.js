@@ -19,7 +19,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbNinjaNvim from '../public/images/works/ninja_nvim.png'
 
 const Home = () => (
   <Layout>
@@ -54,7 +54,7 @@ const Home = () => (
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/takuya.jpg"
+            src="/images/manuel.jpg"
             alt="Profile image"
           />
         </Box>
@@ -154,19 +154,11 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
+            href="https://github.com/manuelduarte077/ninja.nvim"
+            title="NinjaNvim"
+            thumbnail={thumbNinjaNvim}
           >
-            A Markdown note-taking app
-          </GridItem>
-
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
+            My nvim Settings for Windows
           </GridItem>
         </SimpleGrid>
 
