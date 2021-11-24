@@ -69,15 +69,15 @@ const Works = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        {/* <Section delay={0.5}>
+        <Section delay={0.5}>
           <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
+            id="webcoffe"
+            thumbnail={thumbStyly}
+            title="Web Coffe"
           >
-            Automatic audio file tagging tool using FreeDB for Windows
+            Flutter web app for coffee shop. 
           </WorkGridItem>
-        </Section> */}
+        </Section>
       </SimpleGrid>
     </Container>
   </Layout>
