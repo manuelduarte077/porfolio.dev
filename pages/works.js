@@ -5,8 +5,10 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
+// import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
 import thumbStyly from '../public/images/works/styly_eyecatch.png'
+import thumbWeather from '../public/images/works/weather_app.png'
+import thumbAwesomeLatam from '../public/images/works/awesome_latam.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -43,7 +45,7 @@ const Works = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.3}>
+        {/* <Section delay={0.3}>
           <WorkGridItem
             id="modetokyo"
             thumbnail={thumbModeTokyo}
@@ -51,33 +53,43 @@ const Works = () => (
           >
             The mode magazine for understanding to personally enjoy Japan
           </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
+        </Section> */}
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="awesome_latam"
+            thumbnail={thumbAwesomeLatam}
+            title="Gophers LATAM"
+          >
+            Comunidad de programadores Golang en Español-Latino.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
 
       {/* This is the section for old projects but as I have it will be commented */}
-      <Section delay={0.4}>
+      <Section delay={0.5}>
         <Divider my={6} />
-
         <Heading as="h3" fontSize={20} mb={4}>
-          Old works
+          Projects
         </Heading>
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        {/* <Section delay={0.5}>
+        <Section delay={0.6}>
           <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
+            id="weather_app"
+            thumbnail={thumbWeather}
+            title="Weather App UI"
           >
-            Automatic audio file tagging tool using FreeDB for Windows
+            Flutter weather app UI 🚀.
           </WorkGridItem>
-        </Section> */}
+        </Section>
+
+        <Section delay={0.7}>
+          <WorkGridItem id="webcoffe" thumbnail={thumbStyly} title="Web Coffe">
+            Flutter web app for coffee shop ☕.
+          </WorkGridItem>
+        </Section>
       </SimpleGrid>
     </Container>
   </Layout>
