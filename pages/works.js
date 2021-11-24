@@ -7,6 +7,7 @@ import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
 import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
 import thumbStyly from '../public/images/works/styly_eyecatch.png'
+import thumbWeather from '../public/images/works/weather_app.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -71,11 +72,20 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
           <WorkGridItem
+            id="weather_app"
+            thumbnail={thumbWeather}
+            title="Weather App UI"
+          >
+            Flutter weather app UI 🚀. 
+          </WorkGridItem>
+        </Section>
+        <Section delay={0.5}>
+          <WorkGridItem
             id="webcoffe"
             thumbnail={thumbStyly}
             title="Web Coffe"
           >
-            Flutter web app for coffee shop. 
+            Flutter web app for coffee shop ☕. 
           </WorkGridItem>
         </Section>
       </SimpleGrid>
