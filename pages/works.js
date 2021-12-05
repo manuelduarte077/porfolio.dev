@@ -38,7 +38,6 @@ const Works = () => (
 
       <Section delay={0.2}>
         <Divider my={6} />
-
         <Heading as="h3" fontSize={20} mb={4}>
           Collaborations
         </Heading>
@@ -75,12 +74,17 @@ const Works = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.6}>
+
+      <Section delay={0.6}>
           <WorkGridItem
-            id="weather_app"
-            thumbnail={thumbWeather}
-            title="Weather App UI"
-          >
+            id="movie_app" thumbnail={thumbWeather} title="Kotlin MovieApp">
+           Kotlin MovieApp.
+          </WorkGridItem>
+        </Section>
+        
+        <Section delay={0.7}>
+          <WorkGridItem
+            id="weather_app" thumbnail={thumbWeather} title="Weather App UI">
             Flutter weather app UI 🚀.
           </WorkGridItem>
         </Section>
@@ -90,6 +94,7 @@ const Works = () => (
             Flutter web app for coffee shop ☕.
           </WorkGridItem>
         </Section>
+
       </SimpleGrid>
     </Container>
   </Layout>
