@@ -11,6 +11,7 @@ import thumbWeather from '../public/images/works/weather_app.png'
 import thumbAwesomeLatam from '../public/images/works/awesome_latam.png'
 
 import sunnyDesk from '../public/images/works/sunny_desk.png'
+import animatedTodo from '../public/images/works/animated_todo.png'
 
 
 const Works = () => (
@@ -77,6 +78,14 @@ const Works = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+
+
+      <Section delay={0.6}>
+          <WorkGridItem
+            id="animated_todo" thumbnail={animatedTodo} title="Animated Todo">
+           How to build a smoothly animated ToDo app with React Native, Expo, Reanimated, NativeBase, and Moti
+          </WorkGridItem>
+        </Section>
 
       <Section delay={0.6}>
           <WorkGridItem
