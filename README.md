@@ -1,6 +1,6 @@
 # Manuel Duarte Homepage
 
-[https://www.craftz.dog/](https://github.com/manuelduarte077/homepage/)
+[https://manueldev.vercel.app/](https://github.com/manuelduarte077/homepage/)
 
 ## Stack
 
