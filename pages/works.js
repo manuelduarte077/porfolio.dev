@@ -10,6 +10,9 @@ import thumbStyly from '../public/images/works/styly_eyecatch.png'
 import thumbWeather from '../public/images/works/weather_app.png'
 import thumbAwesomeLatam from '../public/images/works/awesome_latam.png'
 
+import sunnyDesk from '../public/images/works/sunny_desk.png'
+
+
 const Works = () => (
   <Layout title="Works">
     <Container>
@@ -77,19 +80,33 @@ const Works = () => (
 
       <Section delay={0.6}>
           <WorkGridItem
+            id="sunny_desk" thumbnail={sunnyDesk} title="SunnyDesk">
+           Compose for Desktop: Get Your Weather!.
+          </WorkGridItem>
+        </Section>
+
+      <Section delay={0.7}>
+          <WorkGridItem
+            id="news_app" thumbnail={thumbWeather} title="Kotlin NewsApp MVVM">
+           🤖 Aplicación de Noticias, usando la arquitectura MVVM, con Kotlin.
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.8}>
+          <WorkGridItem
             id="movie_app" thumbnail={thumbWeather} title="Kotlin MovieApp">
            Kotlin MovieApp.
           </WorkGridItem>
         </Section>
         
-        <Section delay={0.7}>
+        <Section delay={0.9}>
           <WorkGridItem
             id="weather_app" thumbnail={thumbWeather} title="Weather App UI">
             Flutter weather app UI 🚀.
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.7}>
+        <Section delay={0.10}>
           <WorkGridItem id="webcoffe" thumbnail={thumbStyly} title="Web Coffe">
             Flutter web app for coffee shop ☕.
           </WorkGridItem>
