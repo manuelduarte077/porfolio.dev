@@ -5,7 +5,6 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-// import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
 import thumbStyly from '../public/images/works/styly_eyecatch.png'
 import thumbWeather from '../public/images/works/weather_app.png'
 import thumbAwesomeLatam from '../public/images/works/awesome_latam.png'
