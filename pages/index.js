@@ -39,7 +39,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Manuel Duarte
           </Heading>
-          <p>Digital Craftsman ( Developer / Teacher / Crypto )</p>
+          <p>Digital Craftsman ( Developer / Teacher )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -92,11 +92,14 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
-          Worked at NetsSoftNic! Nicaraguan
+          Worked at Netsoftnic! Nicaraguan
         </BioSection>
         <BioSection>
-          <BioYear>2021 to present</BioYear>I work at NetsSoftNic and Works as a
-          freelance
+          <BioYear>2022</BioYear>
+          Worked at Nerdify! Nicaraguan
+        </BioSection>
+        <BioSection>
+          <BioYear>2022 to present</BioYear>I work at Nerdify and Works
         </BioSection>
       </Section>
 
