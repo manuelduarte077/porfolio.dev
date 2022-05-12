@@ -29,18 +29,18 @@ import {
           </ListItem>
           <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://github.com/manuelduarte077/flutter-weather-app">
+          <Link href="https://github.com/manuelduarte077/flutter_web_coffee">
             Web Coffe <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         </List>
   
-        <WorkImage src="/images/works/modetokyo_eyecatch.png" alt="mode.tokyo" />
-        <SimpleGrid columns={2} gap={2}>
-          <WorkImage src="/images/works/modetokyo_01.png" alt="mode.tokyo" />
-          <WorkImage src="/images/works/modetokyo_02.png" alt="mode.tokyo" />
+        <WorkImage src="https://raw.githubusercontent.com/manuelduarte077/flutter_web_coffee/main/docs/Screenshot_101.png" alt="mode.tokyo" />
+        <SimpleGrid columns={3} gap={3}>
+          <WorkImage src="https://raw.githubusercontent.com/manuelduarte077/flutter_web_coffee/main/docs/Screenshot_102.png" alt="mode.tokyo" />
+          <WorkImage src="https://raw.githubusercontent.com/manuelduarte077/flutter_web_coffee/main/docs/Screenshot_103.png" alt="mode.tokyo" />
+        <WorkImage src="https://raw.githubusercontent.com/manuelduarte077/flutter_web_coffee/main/docs/Screenshot_104.png" alt="mode.tokyo" />
         </SimpleGrid>
-        <WorkImage src="/images/works/modetokyo_03.jpg" alt="mode.tokyo" />
       </Container>
     </Layout>
   )
