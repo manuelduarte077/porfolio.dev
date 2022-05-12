@@ -18,7 +18,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbNinjaNvim from '../public/images/works/ninja_nvim.png'
 
 const Home = () => (
@@ -31,7 +31,7 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a mobile developer based in Nicaraguan!
+        Hello, I&apos;m a Software Engineer based in Nicaraguan!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -39,7 +39,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Manuel Duarte
           </Heading>
-          <p>Digital Craftsman ( Developer / Teacher )</p>
+          <p>Software Engineer ( Dart (Flutter) / Kotlin / Swift )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -65,8 +65,9 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Manuel is a freelance and a mobile developer based in Bilwi with a
-          passion for building digital services/stuff he wants.{' '}
+          I am a mobile software engineer from Nicaragua. I create mobile applications using Kotlin and Flutter.{' '}
+          I started the journey of developing mobile apps using Kotlin and Flutter 2 years ago and have been getting familiar with the environments surrounding these amazing tools.{' '}
+          In this time it has led me to understand principles of software development. Always taking into account the necessary tests and the implications of handling user data.{' '}
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
@@ -81,10 +82,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        <BioSection>
-          <BioYear>2017</BioYear>
-          Born in Bilwi.
-        </BioSection>
+
         <BioSection>
           <BioYear>2019</BioYear>
           Completed the Master&apos;s Program in the Graduate School of
@@ -93,10 +91,6 @@ const Home = () => (
         <BioSection>
           <BioYear>2021</BioYear>
           Worked at Netsoftnic! Nicaraguan
-        </BioSection>
-        <BioSection>
-          <BioYear>2022</BioYear>
-          Worked at Nerdify! Nicaraguan
         </BioSection>
         <BioSection>
           <BioYear>2022 to present</BioYear>I work at Nerdify and Works
@@ -140,11 +134,11 @@ const Home = () => (
           </ListItem>
 
           <ListItem>
-            <Link href="https://instagram.com/manuelduarte077" target="_blank">
+            <Link href="https://www.linkedin.com/in/manuelduarte077/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoInstagram} />}
+                leftIcon={<Icon as={IoLogoLinkedin} />}
               >
                 @manuelduarte077
               </Button>
