@@ -51,12 +51,13 @@ const Home = () => (
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/manuel.jpg"
+            src="/images/img.png"
             alt="Profile image"
-          />
+            width={90}
+            height={90}
+/>
         </Box>
       </Box>
 
