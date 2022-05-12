@@ -3,7 +3,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
+import thumbStyly from '../public/images/works/web_coffe.png'
 import thumbWeather from '../public/images/works/weather_app.png'
 import thumbAwesomeLatam from '../public/images/works/awesome_latam.png'
 
