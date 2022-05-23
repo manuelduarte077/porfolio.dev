@@ -35,38 +35,21 @@ const Work = () => (
                 </ListItem>
             </List>
 
-            <SimpleGrid columns={2} gap={2}>
+            <SimpleGrid columns={3} gap={5}>
                 <WorkImage
-                    src="https://raw.githubusercontent.com/manuelduarte077/react-native-animated-todo/main/doc/home-light.png"
+                    src="https://raw.githubusercontent.com/manuelduarte077/bloc_game_api/main/assets/home.png"
                     alt="weather"
                 />
                 <WorkImage
-                    src="https://raw.githubusercontent.com/manuelduarte077/react-native-animated-todo/main/doc/home.png"
+                    src="https://raw.githubusercontent.com/manuelduarte077/bloc_game_api/main/assets/detail.png"
+                    alt="weather_01"
+                />
+                <WorkImage
+                    src="https://raw.githubusercontent.com/manuelduarte077/bloc_game_api/main/assets/get.png"
                     alt="weather_01"
                 />
             </SimpleGrid>
 
-            <SimpleGrid columns={2} gap={2}>
-                <WorkImage
-                    src="https://raw.githubusercontent.com/manuelduarte077/react-native-animated-todo/main/doc/sidebar-light.png"
-                    alt="weather_01"
-                />
-                <WorkImage
-                    src="https://raw.githubusercontent.com/manuelduarte077/react-native-animated-todo/main/doc/sidebar.png"
-                    alt="weather_01"
-                />
-            </SimpleGrid>
-
-            <SimpleGrid columns={2} gap={2}>
-                <WorkImage
-                    src="https://raw.githubusercontent.com/manuelduarte077/react-native-animated-todo/main/doc/about-light.png"
-                    alt="weather_01"
-                />
-                <WorkImage
-                    src="https://raw.githubusercontent.com/manuelduarte077/react-native-animated-todo/main/doc/about.png"
-                    alt="weather_01"
-                />
-            </SimpleGrid>
         </Container>
     </Layout>
 )
