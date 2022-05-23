@@ -15,7 +15,7 @@ const Work = () => (
   <Layout title="Animated Todo">
     <Container>
       <Title>
-        Animated Todo <Badge>2020</Badge>
+        Animated Todo <Badge>2021</Badge>
       </Title>
       <P>✨ React Native Animated Todo 🚀</P>
       <List ml={4} my={4}>
