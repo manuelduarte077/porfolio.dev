@@ -5,7 +5,6 @@ import {
     List,
     ListItem,
     SimpleGrid,
-    IconButton
 } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon, PhoneIcon } from '@chakra-ui/icons'
