@@ -6,9 +6,14 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbStyly from '../public/images/works/web_coffe.png'
 import thumbWeather from '../public/images/works/weather_app.png'
 import thumbAwesomeLatam from '../public/images/works/awesome_latam.png'
-
 import sunnyDesk from '../public/images/works/sunny_desk.png'
-import animatedTodo from '../public/images/works/animated_todo.png'
+
+import notepad from '../public/images/works/notepad.png'
+import blocGame from '../public/images/works/bloc_game.png'
+import animated from '../public/images/works/animated.png'
+
+
+
 
 
 const Works = () => (
@@ -58,10 +63,23 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
 
+      <Section delay={0.6}>
+          <WorkGridItem
+            id="notepad" thumbnail={notepad} title="NotePad">
+            👾  Notes app, using markdown to create them 💙         
+          </WorkGridItem>
+        </Section>
 
         <Section delay={0.6}>
           <WorkGridItem
-            id="animated_todo" thumbnail={animatedTodo} title="Animated Todo">
+            id="bloc_game" thumbnail={blocGame} title="BloC Game API">
+            👾  👻 Using the bloc state handler, in a flutter app consuming a video game api 💙 
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.6}>
+          <WorkGridItem
+            id="animated_todo" thumbnail={animated} title="Animated Todo">
             How to build a smoothly animated ToDo app with React Native, Expo, Reanimated, NativeBase, and Moti
           </WorkGridItem>
         </Section>
@@ -80,7 +98,7 @@ const Works = () => (
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.9}>
+        <Section delay={0.8}>
           <WorkGridItem id="webcoffe" thumbnail={thumbStyly} title="Web Coffe">
             Flutter web app for coffee shop ☕.
           </WorkGridItem>
