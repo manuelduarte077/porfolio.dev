@@ -20,6 +20,7 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbNinjaNvim from '../public/images/works/ninja_nvim.png'
+import flutterPackages from '../public/images/works/flutter-2.png'
 
 const Home = () => (
   <Layout>
@@ -57,7 +58,7 @@ const Home = () => (
             alt="Profile image"
             width={90}
             height={90}
-/>
+          />
         </Box>
       </Box>
 
@@ -155,6 +156,14 @@ const Home = () => (
             thumbnail={thumbNinjaNvim}
           >
             My nvim Settings for Windows
+          </GridItem>
+
+          <GridItem
+            href="https://github.com/manuelduarte077/loading_progress_indicator"
+            title="Loading Progress Indicator"
+            thumbnail={flutterPackages}
+          >
+           💙 👾 💫 a flutter widget to indicate loading progress. Easy to use, easy to extend
           </GridItem>
         </SimpleGrid>
 

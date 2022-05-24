@@ -11,10 +11,7 @@ import sunnyDesk from '../public/images/works/sunny_desk.png'
 import notepad from '../public/images/works/notepad.png'
 import blocGame from '../public/images/works/bloc_game.png'
 import animated from '../public/images/works/animated.png'
-
-
-
-
+import ecommerce from '../public/images/works/ecommerce.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -42,6 +39,8 @@ const Works = () => (
           </WorkGridItem>
         </Section> */}
 
+
+
         <Section delay={0.4}>
           <WorkGridItem
             id="awesome_latam"
@@ -63,17 +62,24 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
 
-      <Section delay={0.6}>
+        <Section delay={0.5}>
+          <WorkGridItem
+            id="ecommerce" thumbnail={ecommerce} title="E-commerce">
+           🛒 💙 Development of an E-commerce type app where we use Flutter, firebase and the flutter bloc statemanagement 🔥
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.6}>
           <WorkGridItem
             id="notepad" thumbnail={notepad} title="NotePad">
-            👾  Notes app, using markdown to create them 💙         
+            👾  Notes app, using markdown to create them 💙
           </WorkGridItem>
         </Section>
 
         <Section delay={0.6}>
           <WorkGridItem
             id="bloc_game" thumbnail={blocGame} title="BloC Game API">
-            👾  👻 Using the bloc state handler, in a flutter app consuming a video game api 💙 
+            👾  👻 Using the bloc state handler, in a flutter app consuming a video game api 💙
           </WorkGridItem>
         </Section>
 

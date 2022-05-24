@@ -5,3 +5,4 @@ dist
 .env
 .DS_STORE
 .idea/
+.package-lock.json
