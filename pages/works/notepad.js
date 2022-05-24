@@ -36,7 +36,7 @@ const Work = () => (
                 </ListItem>
             </List>
             <TitlePlatform>
-             IOS  <PhoneIcon /> 
+                IOS             
             </TitlePlatform>
 
             <SimpleGrid columns={2} gap={2}>
