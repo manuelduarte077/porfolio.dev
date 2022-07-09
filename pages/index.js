@@ -40,7 +40,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Manuel Duarte
           </Heading>
-          <p>Software Engineer ( Dart (Flutter) / Kotlin / Swift )</p>
+          <p>Software Engineer ( Dart (Flutter) )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -67,8 +67,8 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          I am a mobile software engineer from Nicaragua. I create mobile applications using Kotlin and Flutter.
-          I started the journey of developing mobile apps using Kotlin and Flutter 2 years ago and have been getting familiar with these environments surrounding these amazing tools. In this time it has led me to understand principles of software development.
+          I am a mobile software engineer from Nicaragua. I create mobile applications using Flutter.
+          I started the mobile app development journey with Kotlin and Flutter 2 years ago and have been getting familiar with these environments surrounding these amazing tools. In this time it has led me to understand the principles of software development.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
