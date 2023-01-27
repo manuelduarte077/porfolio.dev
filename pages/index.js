@@ -93,7 +93,7 @@ const Home = () => (
           Worked at Netsoftnic! Nicaraguan
         </BioSection>
         <BioSection>
-          <BioYear>2022 to present</BioYear>I work at Nerdify and Works
+          <BioYear>2022 to present</BioYear>I work at Nerdify
         </BioSection>
       </Section>
 
