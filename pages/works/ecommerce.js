@@ -30,7 +30,7 @@ const Work = () => (
                 </ListItem>
                 <ListItem>
                     <Meta>Source</Meta>
-                    <Link href="https://github.com/manuelduarte077/notepad">
+                    <Link href="https://github.com/manuelduarte077/ecommerce">
                         E-commerce 🛒 <ExternalLinkIcon mx="2px" />
                     </Link>
                 </ListItem>
