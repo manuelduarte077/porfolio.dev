@@ -1,0 +1,31 @@
+name: personal_website
+description: Personal Website Muhamad Fathul Azis.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_screenutil: ^5.6.0
+  google_fonts: ^3.0.1
+  scrollable_positioned_list: ^0.3.5
+  url_launcher: ^6.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logos/
+    - assets/images/
+    - assets/icons/
