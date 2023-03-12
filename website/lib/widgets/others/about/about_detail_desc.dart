@@ -1,9 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
-import 'package:personal_website/utils/app_utils.dart';
+import 'package:personal_website/theme/theme.dart';
+import 'package:personal_website/utils/utils.dart';
 
 class AboutDetailDesc extends StatefulWidget {
   const AboutDetailDesc({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/data/data.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/widgets/others/project_item.dart';
 
 class Project extends StatelessWidget {

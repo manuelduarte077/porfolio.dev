@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/data/data.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
-import 'package:personal_website/widgets/others/about_detail_one.dart';
-import 'package:personal_website/widgets/others/about_detail_two.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
+import 'package:personal_website/widgets/others/about/about_detail_one.dart';
+import 'package:personal_website/widgets/others/about/about_detail_two.dart';
 
 class About extends StatelessWidget {
   const About({Key? key}) : super(key: key);
@@ -67,7 +67,7 @@ class About extends StatelessWidget {
                           horizontalSpace(15.h),
                           Text(
                             e,
-                            style: TextStyles.firaCodeText
+                            style: TextStyles.interCodeText
                                 .copyWith(color: AppColor.textColor2),
                           ),
                         ],
@@ -93,7 +93,7 @@ class About extends StatelessWidget {
                           horizontalSpace(15.h),
                           Text(
                             e,
-                            style: TextStyles.firaCodeText
+                            style: TextStyles.interCodeText
                                 .copyWith(color: AppColor.textColor2),
                           ),
                         ],

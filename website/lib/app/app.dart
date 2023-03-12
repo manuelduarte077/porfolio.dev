@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/views/home_view.dart';
+import 'package:personal_website/views/home_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
       designSize: const Size(1920, 1080),
       builder: (context, child) {
         return MaterialApp(
-          theme: ThemeData.dark(
+          theme: ThemeData.light(
             useMaterial3: true,
           ),
-          home: const HomeView(),
+          home: const HomeScreen(),
         );
       },
     );

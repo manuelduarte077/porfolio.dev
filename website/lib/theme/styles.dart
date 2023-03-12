@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:personal_website/styles/colors.dart';
+import 'package:personal_website/theme/colors.dart';
 
 Widget verticalSpace(double v) {
   return SizedBox(height: v);
@@ -12,7 +12,7 @@ Widget horizontalSpace(double v) {
 }
 
 class TextStyles {
-  static TextStyle firaCodeText = GoogleFonts.firaCode().copyWith(
+  static TextStyle interCodeText = GoogleFonts.inter().copyWith(
     fontWeight: FontWeight.w400,
     fontSize: 16.h,
     color: AppColor.primaryColor,

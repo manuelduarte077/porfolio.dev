@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/models/project_model.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/utils/app_utils.dart';
 import 'package:personal_website/widgets/buttons/icon_button_custom.dart';
 import 'package:personal_website/widgets/buttons/text_button_custom.dart';
@@ -128,8 +128,9 @@ class _ProjectItemState extends State<ProjectItem> {
               child: RichText(
                 text: TextSpan(
                   text: 'Associated with ',
-                  style: TextStyles.firaCodeText
-                      .copyWith(color: AppColor.textColor1),
+                  style: TextStyles.interCodeText.copyWith(
+                    color: AppColor.textColor1,
+                  ),
                   children: [
                     TextSpan(
                       recognizer: TapGestureRecognizer()
@@ -148,7 +149,7 @@ class _ProjectItemState extends State<ProjectItem> {
                         });
                       },
                       text: widget.data.companyName,
-                      style: TextStyles.firaCodeText.copyWith(
+                      style: TextStyles.interCodeText.copyWith(
                         color: AppColor.primaryColor,
                         decoration: decoration,
                         decorationColor: AppColor.primaryColor,

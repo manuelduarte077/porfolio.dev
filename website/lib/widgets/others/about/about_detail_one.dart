@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/widgets/cards/profile_card.dart';
-import 'package:personal_website/widgets/others/about_detail_desc.dart';
+import 'package:personal_website/widgets/others/about/about_detail_desc.dart';
 
 class AboutDetailOne extends StatelessWidget {
   const AboutDetailOne({Key? key}) : super(key: key);

@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/widgets/buttons/floating_left_button.dart';
-import 'package:personal_website/widgets/buttons/floating_right_button.dart';
-import 'package:personal_website/widgets/others/about.dart';
-import 'package:personal_website/widgets/others/appbar_custom.dart';
-import 'package:personal_website/widgets/others/contact.dart';
-import 'package:personal_website/widgets/others/drawer_custom.dart';
-import 'package:personal_website/widgets/others/experience.dart';
-import 'package:personal_website/widgets/others/footer.dart';
-import 'package:personal_website/widgets/others/general_introduction.dart';
-import 'package:personal_website/widgets/others/project.dart';
-import 'package:personal_website/widgets/others/project_other.dart';
+
+import 'package:personal_website/widgets/widgets.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeScreenState extends State<HomeScreen> {
   final itemScrollController = ItemScrollController();
 
   List<Widget> contents = const [
+    /// General Introduction
     GeneralIntroduction(),
+
+    /// About
     About(),
+
+    /// Experience
     Experience(),
+
+    /// Work
     Project(),
     ProjectOther(),
+
+    /// Contact
     Contact(),
+
+    /// Footer
     Footer(),
   ];
 

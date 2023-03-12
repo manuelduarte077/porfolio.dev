@@ -1,9 +1,8 @@
-// ignore_for_file: avoid_field_initializers_in_const_classes
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/utils/app_asset.dart';
 import 'package:personal_website/utils/app_utils.dart';
 import 'package:personal_website/widgets/buttons/primary_button.dart';
@@ -24,13 +23,16 @@ class AppBarCustom extends StatefulWidget implements PreferredSizeWidget {
   final Function() onPressedContact;
 
   @override
-  final Size preferredSize = const Size.fromHeight(kToolbarHeight * 1.5);
-
   @override
   State<AppBarCustom> createState() => _AppBarCustomState();
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight * 1.5);
 }
 
 class _AppBarCustomState extends State<AppBarCustom> {
+  // final Size preferredSize = const Size.fromHeight(kToolbarHeight * 1.5);
+
   @override
   Widget build(BuildContext context) {
     return AppBar(

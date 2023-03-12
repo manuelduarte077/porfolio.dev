@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/data/data.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/widgets/others/experience_detail_desc.dart';
 import 'package:personal_website/widgets/others/experience_detail_title.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/utils/app_utils.dart';
 
 class GeneralIntroductionDesc extends StatefulWidget {
@@ -18,8 +18,8 @@ class _GeneralIntroductionDescState extends State<GeneralIntroductionDesc> {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
+    return SelectableText.rich(
+      TextSpan(
         text:
             "I'm a software engineer specializing develop mobile application using Flutter. Currently, I'm focused on develop mobile application at ",
         style: TextStyles.heeboText
@@ -28,7 +28,7 @@ class _GeneralIntroductionDescState extends State<GeneralIntroductionDesc> {
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                AppUtils.openLink('https://ihsansolusi.co.id/m/#home');
+                AppUtils.openLink('https://getnerdify.com/');
               },
             mouseCursor: MaterialStateMouseCursor.clickable,
             onEnter: (event) {
@@ -41,7 +41,7 @@ class _GeneralIntroductionDescState extends State<GeneralIntroductionDesc> {
                 decoration = TextDecoration.none;
               });
             },
-            text: 'PT. Ihsan Solusi Informatika',
+            text: 'Nerdify',
             style: TextStyles.heeboText.copyWith(
               fontSize: 20.h,
               color: AppColor.primaryColor,
