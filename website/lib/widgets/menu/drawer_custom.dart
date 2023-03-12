@@ -23,7 +23,6 @@ class DrawerCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColor.backgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

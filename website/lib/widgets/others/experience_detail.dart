@@ -43,7 +43,7 @@ class _ExperienceDetailState extends State<ExperienceDetail> {
           ),
           ExperienceDetailDesc(selectedIndex: selectedIndex),
           if (MediaQuery.of(context).size.width < 960)
-            const SizedBox()
+            const ColoredBox(color: Colors.green, child: SizedBox())
           else
             horizontalSpace(MediaQuery.of(context).size.width / 8),
         ],

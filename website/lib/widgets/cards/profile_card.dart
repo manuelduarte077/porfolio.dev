@@ -30,7 +30,9 @@ class ProfileCard extends StatelessWidget {
             height: 300.h,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(AppAsset.image('img_profile.jpeg')),
+                image: AssetImage(
+                  AppAsset.image('img_profile.jpeg'),
+                ),
               ),
               borderRadius: BorderRadius.circular(15.h),
             ),

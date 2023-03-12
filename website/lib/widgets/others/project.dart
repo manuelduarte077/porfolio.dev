@@ -12,7 +12,7 @@ class Project extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        verticalSpace(MediaQuery.of(context).size.height / 6),
+        verticalSpace(MediaQuery.of(context).size.height / 1),
         Row(
           children: [
             Text(

@@ -1,22 +1,25 @@
 import 'package:personal_website/models/experience_model.dart';
 import 'package:personal_website/models/project_model.dart';
 
-const List listTechnologies1 = ['Flutter', 'Git', 'Firebase'];
+const List listTechnologies1 = ['Dart', 'Flutter', 'JavaScript', 'Kotlin'];
 
-const List listTechnologies2 = ['Rest-API', 'Figma', 'Postman'];
+const List listTechnologies2 = [
+  'React Native',
+  'GraphQL',
+  'Rest-API',
+  'Firebase',
+];
 
 const List<ExperienceModel> listExperience = [
   ExperienceModel(
-    companyLink: 'https://ihsansolusi.co.id/m/#home',
-    companyName: 'PT. Ihsan Solusi Informatika',
-    duration: 'Mar 2021 - Present',
+    companyLink: 'https://getnerdify.com/',
+    companyName: 'Nerdify',
+    duration: 'Feb 2022 - Present',
     experiences: [
-      'Work with a team of UI/UX Designer and Back-End Developer to build E-Wallet Apps and Mobile Banking Apps for various clients.',
       'Write, maintain code with implemented clean architecture in every project, and also supervisioned by senior engineer to write good code.',
       'Communicate with multi-disciplinary teams of engineers, designers, project managers, and clients on a daily basis.',
-      'Fix bugs and ensuring the application can used properly when released.'
     ],
-    position: 'Mobile Application Developer',
+    position: 'Software Engineer',
   )
 ];
 

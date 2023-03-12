@@ -34,10 +34,10 @@ class _ProjectItemState extends State<ProjectItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(30.h),
+      padding: EdgeInsets.all(20.h),
       decoration: BoxDecoration(
-        color: AppColor.backgroundColor2,
         borderRadius: BorderRadius.circular(20.h),
+        border: Border.all(color: AppColor.primaryColor),
       ),
       child: Flex(
         direction: Axis.vertical,
@@ -101,25 +101,26 @@ class _ProjectItemState extends State<ProjectItem> {
           ),
           verticalSpace(20.h),
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextButtonCustom(
-                    label: widget.data.projectTitle,
-                    labelTextStyle: TextStyles.heeboText.copyWith(
-                      fontSize: 20.h,
-                      fontWeight: FontWeight.w600,
-                    ),
-                    onPressed: () {},
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextButtonCustom(
+                  label: widget.data.projectTitle,
+                  labelTextStyle: TextStyles.heeboText.copyWith(
+                    fontSize: 20.h,
+                    fontWeight: FontWeight.w600,
                   ),
-                  Text(
-                    widget.data.projectDesc,
-                    style: TextStyles.heeboText
-                        .copyWith(fontSize: 20.h, color: AppColor.textColor2),
-                  ),
-                ],
-              ),
+                  onPressed: () {},
+                ),
+                Text(
+                  widget.data.projectDesc,
+                  softWrap: true,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                  style: TextStyles.heeboText
+                      .copyWith(fontSize: 20.h, color: AppColor.textColor2),
+                ),
+              ],
             ),
           ),
           if (widget.isShowAssociated)

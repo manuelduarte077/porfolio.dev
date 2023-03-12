@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_field_initializers_in_const_classes
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,12 +28,10 @@ class AppBarCustom extends StatefulWidget implements PreferredSizeWidget {
   State<AppBarCustom> createState() => _AppBarCustomState();
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight * 1.5);
+  final Size preferredSize = const Size.fromHeight(kToolbarHeight * 1.5);
 }
 
 class _AppBarCustomState extends State<AppBarCustom> {
-  // final Size preferredSize = const Size.fromHeight(kToolbarHeight * 1.5);
-
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -43,8 +42,9 @@ class _AppBarCustomState extends State<AppBarCustom> {
       leading: Container(
         margin: EdgeInsets.only(left: 40.h),
         decoration: BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage(AppAsset.logo('logo_app.png'))),
+          image: DecorationImage(
+            image: AssetImage(AppAsset.logo('logo_app.png')),
+          ),
         ),
       ),
       actions: MediaQuery.of(context).size.width < 960
