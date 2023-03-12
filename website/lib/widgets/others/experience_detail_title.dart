@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/data/data.dart';
-import 'package:personal_website/styles/colors.dart';
+import 'package:personal_website/theme/colors.dart';
 import 'package:personal_website/widgets/buttons/text_button_custom.dart';
 
 class ExperienceDetailTitle extends StatelessWidget {

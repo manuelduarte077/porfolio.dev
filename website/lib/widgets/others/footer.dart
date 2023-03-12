@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/utils/app_utils.dart';
 import 'package:personal_website/widgets/buttons/icon_button_custom.dart';
 
@@ -69,8 +69,8 @@ class Footer extends StatelessWidget {
           const SizedBox(),
         verticalSpace(40.h),
         Text(
-          'Build by Muhamad Fathul Azis\nwith Flutter Web',
-          style: TextStyles.firaCodeText.copyWith(color: AppColor.textColor2),
+          'Build by @manuelduarte077 \n with Flutter Web',
+          style: TextStyles.interCodeText.copyWith(color: AppColor.textColor2),
           textAlign: TextAlign.center,
         ),
         verticalSpace(40.h),

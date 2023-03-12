@@ -1,6 +1,4 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
-
-import 'dart:html' as html;
+import 'dart:html' as html; // ignore: avoid_web_libraries_in_flutter
 
 import 'package:url_launcher/url_launcher.dart';
 

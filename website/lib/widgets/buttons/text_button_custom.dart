@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/theme.dart';
 
 class TextButtonCustom extends StatefulWidget {
   const TextButtonCustom({
@@ -53,10 +52,12 @@ class _TextButtonCustomState extends State<TextButtonCustom> {
       child: Text(
         widget.label,
         style: widget.labelTextStyle != null
-            ? widget.labelTextStyle!
-                .copyWith(color: isHover ? hoverColor : widget.textColor)
-            : TextStyles.firaCodeText
-                .copyWith(color: isHover ? hoverColor : widget.textColor),
+            ? widget.labelTextStyle!.copyWith(
+                color: isHover ? hoverColor : widget.textColor,
+              )
+            : TextStyles.interCodeText.copyWith(
+                color: isHover ? hoverColor : widget.textColor,
+              ),
       ),
     );
   }

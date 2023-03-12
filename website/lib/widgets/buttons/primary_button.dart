@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/styles/colors.dart';
-import 'package:personal_website/styles/styles.dart';
+import 'package:personal_website/theme/colors.dart';
+import 'package:personal_website/theme/styles.dart';
 
 class ButtonPrimary extends StatelessWidget {
   const ButtonPrimary({
@@ -77,7 +77,7 @@ class ButtonPrimary extends StatelessWidget {
                         child: Text(
                           label ?? 'BUTTON',
                           style: textStyle ??
-                              TextStyles.firaCodeText.copyWith(
+                              TextStyles.interCodeText.copyWith(
                                 color: textColor ?? AppColor.primaryColor,
                               ),
                           textAlign: TextAlign.center,
