@@ -79,7 +79,6 @@ linter:
     - flutter_style_todos
     - hash_and_equals
     - implementation_imports
-    - invariant_booleans
     - iterable_contains_unrelated_type
     - join_return_with_assignment
     - leading_newlines_in_multiline_strings
@@ -188,6 +187,5 @@ linter:
     - use_to_and_as_if_applicable
     - valid_regexps
     - void_checks
-
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
