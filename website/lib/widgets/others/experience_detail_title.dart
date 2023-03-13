@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/data/data.dart';
 import 'package:personal_website/theme/colors.dart';
-import 'package:personal_website/widgets/buttons/text_button_custom.dart';
 
 class ExperienceDetailTitle extends StatelessWidget {
   const ExperienceDetailTitle({
@@ -27,28 +26,34 @@ class ExperienceDetailTitle extends StatelessWidget {
             color: selectedIndex == index
                 ? AppColor.primaryColor
                 : AppColor.textColor2,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(index == 0 ? 5.h : 0),
-              topRight: Radius.circular(index == 0 ? 5.h : 0),
-              bottomLeft: Radius.circular(index == 9 ? 5.h : 0),
-              bottomRight: Radius.circular(index == 9 ? 5.h : 0),
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(5.h)),
           ),
         ),
-        Expanded(
-          child: SizedBox(
-            height: 60.h,
-            child: TextButtonCustom(
-              onPressed: onTap,
-              label: listExperience[index].companyName,
-              isUseOverlayColor: true,
-              padding: EdgeInsets.symmetric(
-                vertical: 20.h,
-                horizontal: 10.h,
+        SizedBox(
+          // height: 60.h,
+          // child: TextButtonCustom(
+          //   onPressed: onTap,
+          //   label: listExperience[index].companyName,
+          //   isUseOverlayColor: true,
+          //   // padding: EdgeInsets.symmetric(
+          //   //   vertical: 20.h,
+          //   //   horizontal: 10.h,
+          //   // ),
+          //   textColor: selectedIndex == index
+          //       ? AppColor.primaryColor
+          //       : AppColor.textColor1,
+          // ),
+          child: TextButton(
+            onPressed: onTap,
+            child: Text(
+              listExperience[index].companyName,
+              style: TextStyle(
+                color: selectedIndex == index
+                    ? AppColor.primaryColor
+                    : AppColor.textColor1,
+                fontSize: 20.h,
+                fontWeight: FontWeight.w600,
               ),
-              textColor: selectedIndex == index
-                  ? AppColor.primaryColor
-                  : AppColor.textColor1,
             ),
           ),
         ),

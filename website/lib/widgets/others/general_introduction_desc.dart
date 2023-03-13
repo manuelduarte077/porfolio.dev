@@ -22,8 +22,7 @@ class _GeneralIntroductionDescState extends State<GeneralIntroductionDesc> {
       TextSpan(
         text:
             "I'm a software engineer specializing develop mobile application using Flutter. Currently, I'm focused on develop mobile application at ",
-        style: TextStyles.heeboText
-            .copyWith(fontSize: 20.h, color: AppColor.textColor2),
+        style: TextStyles.heeboText.copyWith(fontSize: 20),
         children: [
           TextSpan(
             recognizer: TapGestureRecognizer()
@@ -42,12 +41,7 @@ class _GeneralIntroductionDescState extends State<GeneralIntroductionDesc> {
               });
             },
             text: 'Nerdify',
-            style: TextStyles.heeboText.copyWith(
-              fontSize: 20.h,
-              color: AppColor.primaryColor,
-              decoration: decoration,
-              decorationColor: AppColor.primaryColor,
-            ),
+            style: TextStyles.heeboText.copyWith(fontSize: 20.h),
           ),
           const TextSpan(text: '.'),
         ],

@@ -8,7 +8,7 @@ class TextButtonCustom extends StatefulWidget {
     required this.onPressed,
     this.isUseOverlayColor = false,
     this.padding,
-    this.textColor = AppColor.textColor1,
+    // this.textColor = Colors.white,
     this.labelTextStyle,
   }) : super(key: key);
 
@@ -16,7 +16,7 @@ class TextButtonCustom extends StatefulWidget {
   final Function() onPressed;
   final bool isUseOverlayColor;
   final EdgeInsets? padding;
-  final Color textColor;
+  // final Color textColor;
   final TextStyle? labelTextStyle;
 
   @override
@@ -36,7 +36,7 @@ class _TextButtonCustomState extends State<TextButtonCustom> {
         setState(() {
           if (value == true) {
             isHover = true;
-            hoverColor = AppColor.primaryColor;
+            hoverColor = Colors.indigo;
           } else {
             isHover = false;
             hoverColor = AppColor.textColor1;
@@ -52,11 +52,10 @@ class _TextButtonCustomState extends State<TextButtonCustom> {
       child: Text(
         widget.label,
         style: widget.labelTextStyle != null
-            ? widget.labelTextStyle!.copyWith(
-                color: isHover ? hoverColor : widget.textColor,
-              )
+            ? widget.labelTextStyle!
+                .copyWith(color: isHover ? hoverColor : Colors.black)
             : TextStyles.interCodeText.copyWith(
-                color: isHover ? hoverColor : widget.textColor,
+                color: isHover ? hoverColor : Colors.black,
               ),
       ),
     );

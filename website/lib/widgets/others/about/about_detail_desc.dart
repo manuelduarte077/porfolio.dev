@@ -20,8 +20,7 @@ class _AboutDetailDescState extends State<AboutDetailDesc> {
       text: TextSpan(
         text:
             "Fast-forward to today, and I've got my first job as mobile application developer at information technology services and consulting company. My main focus these days is develop mobile application, and maintenance code at ",
-        style: TextStyles.heeboText
-            .copyWith(fontSize: 20.h, color: AppColor.textColor2),
+        style: TextStyles.heeboText.copyWith(fontSize: 20.h),
         children: [
           TextSpan(
             recognizer: TapGestureRecognizer()
@@ -42,7 +41,6 @@ class _AboutDetailDescState extends State<AboutDetailDesc> {
             text: 'PT. Ihsan Solusi Informatika',
             style: TextStyles.heeboText.copyWith(
               fontSize: 20.h,
-              color: AppColor.primaryColor,
               decoration: decoration,
               decorationColor: AppColor.primaryColor,
             ),

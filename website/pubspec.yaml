@@ -1,5 +1,5 @@
 name: personal_website
-description: Personal Website Muhamad Fathul Azis.
+description: Personal Website Manuel Duarte
 
 publish_to: "none"
 
@@ -9,11 +9,14 @@ environment:
   sdk: ">=2.19.2 <3.0.0"
 
 dependencies:
+  bloc: ^8.1.1
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.2
   flutter_lints: ^2.0.0
   flutter_screenutil: ^5.6.0
+  freezed: ^2.3.2
   google_fonts: ^4.0.3
   scrollable_positioned_list: ^0.3.5
   url_launcher: ^6.1.7
