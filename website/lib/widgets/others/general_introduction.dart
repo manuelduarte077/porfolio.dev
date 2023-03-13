@@ -24,7 +24,6 @@ class GeneralIntroduction extends StatelessWidget {
           'Manuel Duarte',
           style: TextStyles.heeboText.copyWith(
             fontSize: MediaQuery.of(context).size.width < 960 ? 40.h : 60.h,
-            color: AppColor.textColor1,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.1,
           ),
@@ -33,7 +32,6 @@ class GeneralIntroduction extends StatelessWidget {
           'I build things for the mobile application',
           style: TextStyles.heeboText.copyWith(
             fontSize: MediaQuery.of(context).size.width < 960 ? 40.h : 60.h,
-            color: AppColor.textColor2,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.1,
           ),
@@ -63,7 +61,7 @@ class GeneralIntroduction extends StatelessWidget {
             label: 'Check out my app!',
             color: Colors.transparent,
             outlineColor: AppColor.primaryColor,
-            radius: 5.h,
+            radius: 8.h,
           ),
         ),
         verticalSpace(MediaQuery.of(context).size.height / 4),

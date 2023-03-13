@@ -1,13 +1,12 @@
 // ignore_for_file: avoid_field_initializers_in_const_classes
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/theme/colors.dart';
-import 'package:personal_website/theme/styles.dart';
-import 'package:personal_website/utils/app_asset.dart';
-import 'package:personal_website/utils/app_utils.dart';
-import 'package:personal_website/widgets/buttons/primary_button.dart';
-import 'package:personal_website/widgets/buttons/text_button_custom.dart';
+import 'package:personal_website/cubits/dark_mode/dark_mode_cubit.dart';
+import 'package:personal_website/theme/theme.dart';
+import 'package:personal_website/utils/utils.dart';
+import 'package:personal_website/widgets/widgets.dart';
 
 class AppBarCustom extends StatefulWidget implements PreferredSizeWidget {
   const AppBarCustom({
@@ -41,12 +40,21 @@ class _AppBarCustomState extends State<AppBarCustom> {
       toolbarHeight: kToolbarHeight * 1.5,
       leading: Container(
         margin: EdgeInsets.only(left: 40.h),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppAsset.logo('logo_app.png')),
-          ),
+        child: const FlutterLogo(
+          size: 40,
+          style: FlutterLogoStyle.stacked,
+          curve: Curves.easeInOut,
+          duration: Duration(seconds: 1),
         ),
       ),
+      // Container(
+      //   margin: EdgeInsets.only(left: 40.h),
+      //   decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //       image: AssetImage(AppAsset.logo('logo_app.png')),
+      //     ),
+      //   ),
+      // ),
       actions: MediaQuery.of(context).size.width < 960
           ? [
               IconButton(
@@ -56,8 +64,11 @@ class _AppBarCustomState extends State<AppBarCustom> {
                 padding: EdgeInsets.zero,
                 icon: const Icon(
                   Icons.menu_outlined,
-                  color: AppColor.primaryColor,
                 ),
+              ),
+              Switch(
+                value: Theme.of(context).brightness == Brightness.dark,
+                onChanged: context.read<DarkModeCubit>().updateDarkMode,
               ),
               horizontalSpace(40.h)
             ]

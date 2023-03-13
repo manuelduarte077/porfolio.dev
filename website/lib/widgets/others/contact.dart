@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/theme/colors.dart';
 import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/utils/app_utils.dart';
 import 'package:personal_website/widgets/buttons/primary_button.dart';
@@ -17,7 +16,6 @@ class Contact extends StatelessWidget {
           'Get In Touch',
           style: TextStyles.heeboText.copyWith(
             fontSize: MediaQuery.of(context).size.width < 960 ? 30.h : 40.h,
-            color: AppColor.textColor1,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.1,
           ),
@@ -31,8 +29,7 @@ class Contact extends StatelessWidget {
                 ),
           child: Text(
             "Although currently I'm not looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
-            style: TextStyles.heeboText
-                .copyWith(fontSize: 20.h, color: AppColor.textColor2),
+            style: TextStyles.heeboText.copyWith(fontSize: 20.h),
             textAlign: TextAlign.center,
           ),
         ),
@@ -43,11 +40,11 @@ class Contact extends StatelessWidget {
           isOutline: true,
           label: 'Say Hello',
           color: Colors.transparent,
-          outlineColor: AppColor.primaryColor,
+          outlineColor: Colors.indigoAccent,
           radius: 5.h,
           onTap: () {
             AppUtils.launcher(
-              Uri(scheme: 'mailto', path: 'azisfathl@gmail.com'),
+              Uri(scheme: 'mailto', path: 'carlos.duarte@getnerdify.com'),
             );
           },
         ),

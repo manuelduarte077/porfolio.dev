@@ -61,14 +61,12 @@ class About extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.keyboard_double_arrow_right_rounded,
-                            color: AppColor.primaryColor,
                             size: 20.h,
                           ),
                           horizontalSpace(15.h),
                           Text(
                             e,
-                            style: TextStyles.interCodeText
-                                .copyWith(color: AppColor.textColor2),
+                            style: TextStyles.interCodeText,
                           ),
                         ],
                       ),
@@ -87,15 +85,10 @@ class About extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.keyboard_double_arrow_right_rounded,
-                            color: AppColor.primaryColor,
                             size: 20.h,
                           ),
                           horizontalSpace(15.h),
-                          Text(
-                            e,
-                            style: TextStyles.interCodeText
-                                .copyWith(color: AppColor.textColor2),
-                          ),
+                          Text(e, style: TextStyles.interCodeText),
                         ],
                       ),
                     );

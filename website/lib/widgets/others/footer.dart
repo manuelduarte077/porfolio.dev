@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/theme/colors.dart';
 import 'package:personal_website/theme/styles.dart';
 import 'package:personal_website/utils/app_utils.dart';
-import 'package:personal_website/widgets/buttons/icon_button_custom.dart';
+import 'package:personal_website/widgets/widgets.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -70,7 +69,7 @@ class Footer extends StatelessWidget {
         verticalSpace(40.h),
         Text(
           'Build by @manuelduarte077 \n with Flutter Web',
-          style: TextStyles.interCodeText.copyWith(color: AppColor.textColor2),
+          style: TextStyles.interCodeText,
           textAlign: TextAlign.center,
         ),
         verticalSpace(40.h),
