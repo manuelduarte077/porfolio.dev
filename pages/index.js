@@ -67,8 +67,11 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          I am a mobile software engineer from Nicaragua. I create mobile applications using Flutter.
-          I started the mobile app development journey with Kotlin and Flutter 2 years ago and have been getting familiar with these environments surrounding these amazing tools. In this time it has led me to understand the principles of software development.
+        I am a mobile software engineer from Nicaragua. I create mobile applications using Flutter.
+I'm a passionate mobile app developer with 2 years of experience in developing cross-platform applications with Flutter. I've worked as a key team member on projects for Nerdify, NetSoftNic, Magudali S.A, from conception to launch in the app stores.
+My primary focus has been on developing cross-platform applications with Flutter, utilizing its vast array of widgets and libraries to create amazing and high-performing user interfaces. I also have experience in integrating APIs, user authentication, and data storage solutions.
+I have worked closely with designers and other developers to ensure on-time project delivery and the highest standards of quality.
+I'm excited to continue learning and growing as a mobile app developer with Flutter and I'm looking for new challenges and opportunities to apply my skills and experience.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
