@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-import { CTA } from "../components";
-import { projects } from "../constants";
-import { arrow } from "../assets/icons";
+import {CTA} from "../components";
+import {projects} from "../constants";
+import {arrow} from "../assets/icons";
 
 const Projects = () => {
   return (
@@ -26,7 +26,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div className='lg:w-[400px] w-full' key={project.name}>
             <div className='block-container w-12 h-12'>
-              <div className={`btn-back rounded-xl ${project.theme}`} />
+              <div className={`btn-back rounded-xl ${project.theme}`}/>
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img
                   src={project.iconUrl}
@@ -61,9 +61,9 @@ const Projects = () => {
         ))}
       </div>
 
-      <hr className='border-slate-200' />
+      <hr className='border-slate-200'/>
 
-      <CTA />
+      <CTA/>
     </section>
   );
 };

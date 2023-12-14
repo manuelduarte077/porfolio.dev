@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
-
-import { socialLinks } from "../constants";
+import {Link} from "react-router-dom";
+import {socialLinks} from "../constants";
 
 const Footer = () => {
   return (
     <footer className='footer font-poppins'>
-      <hr className='border-slate-200' />
+      <hr className='border-slate-200'/>
 
       <div className='footer-container'>
         <p>
-          © 2023 <strong>Adrian Hajdin</strong>. All rights reserved.
+          © 2023 <strong>Manuel Duarte</strong>. All rights reserved.
         </p>
 
         <div className='flex gap-3 justify-center items-center'>

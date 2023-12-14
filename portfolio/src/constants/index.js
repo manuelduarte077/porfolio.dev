@@ -27,29 +27,10 @@ import {
 } from "../assets/icons";
 
 export const skills = [
+
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
+        imageUrl: typescript,
+        name: "TypeScript",
         type: "Frontend",
     },
     {
@@ -58,43 +39,13 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
         imageUrl: react,
         name: "React",
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
+        imageUrl: css,
+        name: "CSS",
         type: "Frontend",
     },
     {
@@ -102,20 +53,16 @@ export const skills = [
         name: "Tailwind CSS",
         type: "Frontend",
     },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    }
+
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
+        title: "Flutter Developer",
+        company_name: "Nerdify",
         icon: starbucks,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "Jan 2022 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -124,11 +71,11 @@ export const experiences = [
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
+        title: "Xamarin Developer",
+        company_name: "Netsoftnic",
         icon: tesla,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "Ago 2021 - Ene 2022",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -137,29 +84,25 @@ export const experiences = [
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
+        title: "Flutter Mobile Developer",
+        company_name: "Magudali",
         icon: shopify,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "Jul 2021 - Oct 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Desarrollo de aplicaciones móviles con Flutter.",
+        
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
+        title: "Catedrático universitario",
+        company_name: "Universidad de URACCAN",
         icon: meta,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "Feb 2021 - Dec 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+           "Impartir clases en el área de informática.",
+           "Desarrollar proyectos de investigación.",
         ],
     },
 ];
@@ -179,6 +122,11 @@ export const socialLinks = [
         name: 'LinkedIn',
         iconUrl: linkedin,
         link: 'https://www.linkedin.com/in/manuelduarte077',
+    },
+    {
+        name: 'X',
+        iconUrl: linkedin,
+        link: 'https://twitter.com/manuelduarte077',
     }
 ];
 

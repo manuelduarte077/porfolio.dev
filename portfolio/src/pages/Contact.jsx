@@ -1,20 +1,20 @@
 import emailjs from "@emailjs/browser";
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useState } from "react";
+import {Canvas} from "@react-three/fiber";
+import {Suspense, useRef, useState} from "react";
 
-import { Fox } from "../models";
+import {Fox} from "../models";
 import useAlert from "../hooks/useAlert";
-import { Alert, Loader } from "../components";
+import {Alert, Loader} from "../components";
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const { alert, showAlert, hideAlert } = useAlert();
+  const [form, setForm] = useState({name: "", email: "", message: ""});
+  const {alert, showAlert, hideAlert} = useAlert();
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
 
-  const handleChange = ({ target: { name, value } }) => {
-    setForm({ ...form, [name]: value });
+  const handleChange = ({target: {name, value}}) => {
+    setForm({...form, [name]: value});
   };
 
   const handleFocus = () => setCurrentAnimation("walk");
@@ -146,9 +146,9 @@ const Contact = () => {
             far: 1000,
           }}
         >
-          <directionalLight position={[0, 0, 1]} intensity={2.5} />
-          <ambientLight intensity={1} />
-          <pointLight position={[5, 10, 0]} intensity={2} />
+          <directionalLight position={[0, 0, 1]} intensity={2.5}/>
+          <ambientLight intensity={1}/>
+          <pointLight position={[5, 10, 0]} intensity={2}/>
           <spotLight
             position={[10, 10, 10]}
             angle={0.15}
@@ -156,7 +156,7 @@ const Contact = () => {
             intensity={2}
           />
 
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<Loader/>}>
             <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
