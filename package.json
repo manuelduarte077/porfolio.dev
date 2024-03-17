@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
+    "format": "prettier --write \"**/*.{astro,cjs,css,js,json,md,mjs,ts,tsx}\"",
     "preview": "astro preview",
-    "check": "astro check",
     "astro": "astro"
   },
   "dependencies": {
@@ -27,5 +27,8 @@
     "prettier": "2.8.8",
     "prettier-plugin-astro": "0.9.0",
     "prettier-plugin-tailwindcss": "0.3.0"
+  },
+  "volta": {
+    "node": "20.11.0"
   }
 }
