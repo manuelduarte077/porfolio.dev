@@ -3,6 +3,8 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import formatDate from "@/utils/formatDate";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
 
@@ -18,7 +20,6 @@ type Props = {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
-
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
