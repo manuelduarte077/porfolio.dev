@@ -17,6 +17,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^7.3.6
     version: 7.3.6(astro@3.6.5)
+  '@vercel/analytics':
+    specifier: 1.2.2
+    version: 1.2.2
   astro:
     specifier: ^3.1.0
     version: 3.6.5(typescript@5.4.2)
