@@ -6,6 +6,7 @@ import { SITE_URL } from "./src/data/config";
 
 import vercel from "@astrojs/vercel/serverless";
 
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), sitemap(), robotsTxt()],
@@ -18,5 +19,9 @@ export default defineConfig({
     }
   },
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  })
 });
+
+
