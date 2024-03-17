@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "format": "prettier --write \"**/*.{astro,cjs,css,js,json,md,mjs,ts,tsx}\"",
+    "format": "prettier --write \"**/*.{astro,cjs,css,js,json,md,mjs,ts,tsx}\" -fix",
     "preview": "astro preview",
     "astro": "astro"
   },

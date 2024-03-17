@@ -10,7 +10,7 @@ const projects: Project[] = [
     title: "Dictionary App",
     techs: ["ReactJS (NextJS)", "react-query", "zod"],
     link: "#",
-  },    
+  },
   {
     title: "Portfolio / Don Manuel",
     techs: ["Astro"],
@@ -33,8 +33,6 @@ const projects: Project[] = [
     techs: ["ReactJS (NextJS)", "react-query", "zod"],
     link: "#",
   },
-
-
 ];
 
 export default projects;
