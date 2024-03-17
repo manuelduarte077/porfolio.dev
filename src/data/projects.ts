@@ -10,6 +10,12 @@ const projects: Project[] = [
     title: "Dictionary App",
     techs: ["ReactJS (NextJS)", "react-query", "zod"],
     link: "#",
+  },    
+  {
+    title: "Portfolio / Don Manuel",
+    techs: ["Astro"],
+    link: "/",
+    isComingSoon: true,
   },
   {
     title: "Portfolio / Lina BLIDI",
@@ -17,11 +23,18 @@ const projects: Project[] = [
     link: "#",
   },
   {
-    title: "Portfolio / Don Manuel",
-    techs: ["Astro"],
-    link: "/",
-    isComingSoon: true,
+    title: "Dictionary App",
+    techs: ["ReactJS (NextJS)", "react-query", "zod"],
+    link: "#",
   },
+
+  {
+    title: "Dictionary App",
+    techs: ["ReactJS (NextJS)", "react-query", "zod"],
+    link: "#",
+  },
+
+
 ];
 
 export default projects;
