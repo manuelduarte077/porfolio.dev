@@ -7,9 +7,9 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Dictionary App",
-    techs: ["ReactJS (NextJS)", "react-query", "zod"],
-    link: "#",
+    title: "NotyApp",
+    techs: ["Android (Kotlin)"],
+    link: "https://play.google.com/store/apps/details?id=com.manuelduarte077.notyapp",
   },
   {
     title: "Portfolio / Don Manuel",
@@ -18,20 +18,15 @@ const projects: Project[] = [
     isComingSoon: true,
   },
   {
-    title: "Portfolio / Lina BLIDI",
-    techs: ["ReactJS (NextJS)", "TypeScript"],
-    link: "#",
+    title: "Wonder Noty App",
+    techs: ["React Native (Expo)", "Javascript"],
+    link: "https://apps.apple.com/us/app/wonder-noty-app/id6475991888",
   },
   {
-    title: "Dictionary App",
-    techs: ["ReactJS (NextJS)", "react-query", "zod"],
+    title: "NotedUp",
+    techs: ["Dart (Flutter)", "Android", "iOS","Firebase"],
     link: "#",
-  },
-
-  {
-    title: "Dictionary App",
-    techs: ["ReactJS (NextJS)", "react-query", "zod"],
-    link: "#",
+    isComingSoon: true,
   },
 ];
 
