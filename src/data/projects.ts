@@ -28,6 +28,11 @@ const projects: Project[] = [
     link: "#",
     isComingSoon: true,
   },
+  {
+    title: "News App",
+    techs: ["React Native (Expo)", "Javascript","API"],
+    link: "#",
+  }
 ];
 
 export default projects;
