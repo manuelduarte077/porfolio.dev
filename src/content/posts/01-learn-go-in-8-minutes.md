@@ -1,6 +1,6 @@
 ---
 title: "Learn Go in 8 minutes"
-publishedAt: 2023-05-24
+publishedAt: 2021-06-01
 description: "Learning the basics of Go and how it works. I chose Go as a starting language here because of its ease of use and performance."
 slug: "learn-go-in-8-minutes"
 isPublish: true
