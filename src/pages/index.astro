@@ -89,7 +89,10 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       <section class="flex flex-col gap-4">
         {
           projects.length !== 0 &&
-            projects.slice(0, 3).map((project) => <ProjectCard {...project} />)
+            projects
+              .sort(() => Math.random() - 0.5)
+              .slice(0, 3)
+              .map((project) => <ProjectCard {...project} />)
         }
       </section>
     </article>
