@@ -1,12 +1,11 @@
 ---
 title: "Los 10 Mejores Libros de Desarrollo de Software para Impulsar tu Carrera"
 publishedAt: 2024-03-19
-description: "El desarrollo de software es un campo en constante evolución, y mantenerse al día con las últimas tecnologías y prácticas es esencial para cualquier profesional en esta área."
+description: "El desarrollo de software es un campo en constante evolución, y mantenerse al día con las últimas tecnologías y prácticas es esencial para cualquier profesional en esta área. Si estás buscando expandir tus conocimientos y mejorar tus habilidades, estos 10 libros son lecturas obligatorias"
 slug: "los-10-mejores-libros-de-desarrollo-de-software"
 isPublish: false
 ---
 
-El desarrollo de software es un campo en constante evolución, y mantenerse al día con las últimas tecnologías y prácticas es esencial para cualquier profesional en esta área. Si estás buscando expandir tus conocimientos y mejorar tus habilidades, estos 10 libros son lecturas obligatorias:
 
 **"Clean Code: A Handbook of Agile Software Craftsmanship"** de Robert C. Martin: Este libro es un clásico atemporal que ofrece principios y prácticas para escribir código limpio y mantenible, ayudándote a mejorar la calidad de tu trabajo y a colaborar de manera efectiva en equipos de desarrollo. - [Obtén el libro aquí](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 

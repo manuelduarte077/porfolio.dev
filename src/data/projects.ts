@@ -32,6 +32,12 @@ const projects: Project[] = [
     title: "News App",
     techs: ["React Native (Expo)", "Javascript","API"],
     link: "#",
+  },
+  {
+    title: "Taimba Nahkisa",
+    techs: ["Dart (Flutter)", "Android", "iOS", "API"],
+    link: "#",
+    isComingSoon: true,
   }
 ];
 
