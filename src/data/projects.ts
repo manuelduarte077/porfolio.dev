@@ -12,10 +12,9 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.manuelduarte077.notyapp",
   },
   {
-    title: "Portfolio / Don Manuel",
-    techs: ["Astro"],
-    link: "/",
-    isComingSoon: true,
+    title: "Devote App",
+    techs: ["SwiftUI", "iOS"],
+    link: "https://github.com/manuelduarte077/Devote",
   },
   {
     title: "Wonder Noty App",
@@ -29,16 +28,22 @@ const projects: Project[] = [
     isComingSoon: true,
   },
   {
+    title: "Portfolio / Don Manuel",
+    techs: ["Astro"],
+    link: "/",
+    isComingSoon: true,
+  },
+  {
     title: "News App",
     techs: ["React Native (Expo)", "Javascript","API"],
-    link: "#",
+    link: "https://github.com/manuelduarte077/news_app",
   },
   {
     title: "Taimba Nahkisa",
     techs: ["Dart (Flutter)", "Android", "iOS", "API"],
     link: "#",
     isComingSoon: true,
-  }
+  },
 ];
 
 export default projects;
