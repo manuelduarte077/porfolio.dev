@@ -12,9 +12,10 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.manuelduarte077.notyapp",
   },
   {
-    title: "Devote App",
-    techs: ["SwiftUI", "iOS"],
-    link: "https://github.com/manuelduarte077/Devote",
+    title: "Cartelera App",
+    techs: ["Dart (Flutter)", "Android", "iOS", "API"],
+    link: "Movies Landing Page",
+    isComingSoon: true,
   },
   {
     title: "Wonder Noty App",
