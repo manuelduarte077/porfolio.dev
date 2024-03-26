@@ -13,9 +13,8 @@ const projects: Project[] = [
   },
   {
     title: "Cartelera App",
-    techs: ["Dart (Flutter)", "Android", "iOS", "API"],
-    link: "Movies Landing Page",
-    isComingSoon: true,
+    techs: ["Dart (Flutter)", "Riverpod", "THE_MOVIEDB_API"],
+    link: "https://github.com/manuelduarte077/movies",
   },
   {
     title: "Wonder Noty App",
@@ -38,12 +37,6 @@ const projects: Project[] = [
     title: "News App",
     techs: ["React Native (Expo)", "Javascript","API"],
     link: "https://github.com/manuelduarte077/news_app",
-  },
-  {
-    title: "Taimba Nahkisa",
-    techs: ["Dart (Flutter)", "Android", "iOS", "API"],
-    link: "#",
-    isComingSoon: true,
   },
 ];
 
