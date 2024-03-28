@@ -6,9 +6,20 @@ import { SITE_URL } from "./src/data/config";
 
 import vercel from "@astrojs/vercel/serverless";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), robotsTxt()],
+  integrations: [
+    tailwind(),
+    sitemap(),
+    robotsTxt(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
   site: SITE_URL,
   markdown: {
     syntaxHighlight: "shiki",
@@ -20,5 +31,5 @@ export default defineConfig({
   output: "server",
   adapter: vercel({
     webAnalytics: { enabled: true },
-   }),
+  }),
 });
