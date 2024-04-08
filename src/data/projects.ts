@@ -23,9 +23,8 @@ const projects: Project[] = [
   },
   {
     title: "NotedUp",
-    techs: ["Dart (Flutter)", "Android", "iOS","Firebase"],
-    link: "#",
-    isComingSoon: true,
+    techs: ["Dart (Flutter)", "Android", "iOS", "Firebase"],
+    link: "https://app.notedup.donmanuel.dev/app",
   },
   {
     title: "Portfolio / Don Manuel",
@@ -35,7 +34,7 @@ const projects: Project[] = [
   },
   {
     title: "News App",
-    techs: ["React Native (Expo)", "Javascript","API"],
+    techs: ["React Native (Expo)", "Javascript", "API"],
     link: "https://github.com/manuelduarte077/news_app",
   },
 ];
