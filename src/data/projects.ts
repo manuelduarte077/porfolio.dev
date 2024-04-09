@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     title: "Wonder Noty App",
     techs: ["React Native (Expo)", "Javascript"],
-    link: "https://apps.apple.com/us/app/wonder-noty-app/id6475991888",
+    link: "https://app.noty.donmanuel.dev/link",
   },
   {
     title: "NotedUp",
