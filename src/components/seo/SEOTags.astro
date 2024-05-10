@@ -15,7 +15,7 @@ const DEFAULT_URL_SITE = SITE_URL;
 const openGraph = {
   title: title || og?.title || DEFAULT_TITLE_PAGE,
   type: og?.type || "website",
-  image: og?.image || "/opengraph-image.jpg",
+  image: og?.image || "/images/donmanuel-og.png",
   alt: og?.alt || "manuel duarte, manuel, duarte, software engineer",
   url: DEFAULT_URL_SITE,
   description: og?.description || DEFAULT_DESCRIPTION_PAGE,
@@ -36,10 +36,21 @@ const openGraph = {
       },
       image: {
         alt: openGraph.alt,
+        height: 630,
+        width: 1200,
+      },
+      optional: {
+        locale: "en_US",
+        siteName: "Don Manuel",
+        description: openGraph.description,
       },
     }}
     twitter={{
       creator: "@manuelduarte077",
+      description: openGraph.description,
+      image: openGraph.image,
+      imageAlt: openGraph.alt,
+      title: openGraph.title,
     }}
     extend={{
       link: [
@@ -60,6 +71,7 @@ const openGraph = {
       ],
     }}
   />
+
   <AstroFont
     config={[
       {
