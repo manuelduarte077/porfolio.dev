@@ -6,6 +6,6 @@ export default function convertAsteriskToStrongTag(str: string) {
     /\*{1,2}(.*?)\*{1,2}/g,
     `<strong class="font-normal ${
       MAP_COLOR_VARIANT_TO_TEXT[theme.colors.primary]
-    }">$1</strong>`
+    }">$1</strong>`,
   );
 }
