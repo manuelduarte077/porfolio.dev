@@ -36,10 +36,21 @@ const openGraph = {
       },
       image: {
         alt: openGraph.alt,
+        height: 630,
+        width: 1200,
+      },
+      optional: {
+        locale: "en_US",
+        siteName: "Don Manuel",
+        description: openGraph.description,
       },
     }}
     twitter={{
       creator: "@manuelduarte077",
+      description: openGraph.description,
+      image: openGraph.image,
+      imageAlt: openGraph.alt,
+      title: openGraph.title,
     }}
     extend={{
       link: [
@@ -60,6 +71,7 @@ const openGraph = {
       ],
     }}
   />
+
   <AstroFont
     config={[
       {
