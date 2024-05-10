@@ -4,13 +4,13 @@ import { SITE_URL } from "./src/data/config";
 import tailwind from "@astrojs/tailwind";
 import robotsTxt from "astro-robots-txt";
 import vercel from "@astrojs/vercel/serverless";
-import sitemap from '@astrojs/sitemap'
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     tailwind({
-      configPath: './tailwind.config.js',
+      configPath: "./tailwind.config.js",
     }),
     sitemap(),
     robotsTxt(),
