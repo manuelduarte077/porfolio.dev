@@ -27,12 +27,6 @@ const projects: Project[] = [
     link: "https://app.notedup.donmanuel.dev/app",
   },
   {
-    title: "Portfolio / Don Manuel",
-    techs: ["Astro"],
-    link: "/",
-    isComingSoon: true,
-  },
-  {
     title: "News App",
     techs: ["React Native (Expo)", "Javascript", "API"],
     link: "https://github.com/manuelduarte077/news_app",

@@ -16,7 +16,7 @@ const presentation: Presentation = {
   title: "Hi, I’m Manuel 👋",
   // profile: "/profile.webp",
   description:
-    "What's up, I'm *Mobile Application Developer* with more than *3 years of experience*. I am currently working with *React Native and Flutter*. Outside of work, I play FIFA and learning TypeScript.",
+    "What's up, I'm *Mobile Application Developer* with more than *4 years of experience*. I am currently working with *React Native and Flutter*. Outside of work, I play FIFA and learning KMP",
   socials: [
     {
       label: "X",
