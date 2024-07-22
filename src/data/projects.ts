@@ -3,6 +3,7 @@ export type Project = {
   techs: string[];
   link: string;
   isComingSoon?: boolean;
+  description?: string;
 };
 
 const projects: Project[] = [
@@ -31,6 +32,16 @@ const projects: Project[] = [
     techs: ["React Native (Expo)", "Javascript", "API"],
     link: "https://github.com/manuelduarte077/news_app",
   },
+  {
+    title: "Auris Cleaning Services",
+    techs: ["React", "Typescript", "TailwindCSS", "CEO"],
+    link: "https://www.auriscleaningservices.com/",
+  },
+  {
+    title: "Lomas Club App",
+    techs: ["Dart (Futter)", "PixelPay", "Android", "iOS"],
+    link: "https://apps.apple.com/no/app/lomas-club-app/id6470324204",
+  }
 ];
 
 export default projects;
