@@ -41,7 +41,7 @@ const projects: Project[] = [
     title: "Lomas Club App",
     techs: ["Dart (Futter)", "PixelPay", "Android", "iOS"],
     link: "https://apps.apple.com/no/app/lomas-club-app/id6470324204",
-  }
+  },
 ];
 
 export default projects;
