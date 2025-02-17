@@ -92,7 +92,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
             projects
               .sort(() => Math.random() - 0.5)
               .slice(0, 3)
-              .map((project) => <ProjectCard {...project} />)
+              .map((project) => <ProjectCard {...project} variant="compact" />)
         }
       </section>
     </article>
