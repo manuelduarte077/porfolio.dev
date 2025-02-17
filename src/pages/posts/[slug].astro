@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import formatDate from "@/utils/formatDate";
+import ReadingModeToggle from "@/components/shared/ReadingModeToggle.astro";
 
 export const prerender = true;
 
@@ -23,14 +24,20 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
-  <main class="post mx-auto flex w-full max-w-prose flex-col gap-4">
-    <header role="presentation">
-      <h1 class="text-lg mb-4 text-white">
-        {post.data.title} - {formatDate(post.data.publishedAt)}
-      </h1>
-      <p class="italic">{post.data.description}</p>
-    </header>
-    <div class="divider m-0"></div>
-    <Content />
-  </main>
+  <article class="mx-auto w-full max-w-[90ch]">
+    <ReadingModeToggle />
+    <main class="post flex flex-col gap-4">
+      <header role="presentation" class="mb-8">
+        <h1 class="mb-4 text-2xl font-bold text-white">
+          {post.data.title}
+        </h1>
+        <time class="text-sm text-neutral-400">
+          {formatDate(post.data.publishedAt)}
+        </time>
+        <p class="mt-4 italic text-neutral-300">{post.data.description}</p>
+      </header>
+      <div class="divider m-0"></div>
+      <Content />
+    </main>
+  </article>
 </Layout>

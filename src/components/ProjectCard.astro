@@ -1,39 +1,84 @@
 ---
 import type { Project } from "@/data/projects";
 
-type Props = Project;
+type Props = Project & {
+  variant?: "compact" | "grid";
+};
 
-const { title, techs, link, isComingSoon } = Astro.props;
+const {
+  title,
+  techs,
+  link,
+  isComingSoon,
+  image,
+  variant = "grid",
+} = Astro.props;
 
 const formatTechs = (values: string[]) =>
   values.toString().replaceAll(",", " • ");
+
+const isCompact = variant === "compact";
 ---
 
 <>
   {
-    isComingSoon && (
-      <div class="t group flex w-full flex-col justify-between gap-2 rounded-md border border-neutral-700 p-4 md:flex-row md:items-center">
-        <div class="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
-          <p class="text-neutral-100">{title}</p>
-          <p>{formatTechs(techs)}</p>
+    isComingSoon ? (
+      <div
+        class:list={[
+          "group rounded-md border border-neutral-700 p-4 transition-all duration-300",
+          isCompact
+            ? "flex items-center justify-between gap-4"
+            : "flex flex-col gap-4",
+        ]}
+      >
+        <div class:list={[isCompact ? "flex items-center gap-4" : "space-y-4"]}>
+          {image && (
+            <img
+              src={image}
+              alt={`Preview de ${title}`}
+              class:list={[
+                "rounded-md object-cover",
+                isCompact ? "h-24 w-24" : "h-48 w-full",
+              ]}
+              loading="lazy"
+            />
+          )}
+          <div class="flex flex-col gap-2">
+            <h3 class="text-neutral-100">{title}</h3>
+            <p class="text-sm text-neutral-400">{formatTechs(techs)}</p>
+          </div>
         </div>
-
-        <p class="w-fit rounded-md bg-neutral-900 px-4 py-1">Soon</p>
+        <span class="rounded-md bg-neutral-900 px-4 py-1 text-sm">Soon</span>
       </div>
-    )
-  }
-
-  {
-    !isComingSoon && (
+    ) : (
       <a
-        class="group flex w-full cursor-pointer flex-col justify-between gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 md:flex-row md:items-center"
+        class:list={[
+          "group rounded-md border border-neutral-700 p-4 transition-all duration-300",
+          "hover:-translate-y-2 hover:border-neutral-400",
+          isCompact
+            ? "flex items-center justify-between gap-4"
+            : "flex flex-col gap-4",
+        ]}
         href={link}
         target="_blank"
         rel="noreferrer"
       >
-        <div class="flex flex-col gap-4 md:flex-row md:items-center">
-          <p class="text-neutral-100">{title}</p>
-          <p>{formatTechs(techs)}</p>
+        <div class:list={[isCompact ? "flex items-center gap-4" : "space-y-4"]}>
+          {image && (
+            <img
+              src={image}
+              alt={`Preview de ${title}`}
+              class:list={[
+                "rounded-md object-cover",
+                isCompact ? "h-24 w-24" : "h-48 w-full",
+              ]}
+              loading="lazy"
+            />
+          )}
+          <div class="flex flex-col gap-2">
+            <h3 class="text-neutral-100">{title}</h3>
+            <p class="text-sm text-neutral-400">{formatTechs(techs)}</p>
+          </div>
         </div>
 
         <svg
@@ -41,7 +86,8 @@ const formatTechs = (values: string[]) =>
           height="18"
           viewBox="0 0 18 18"
           fill="none"
-          class="transition-all duration-300 group-hover:translate-x-1"
+          class="h-fit transition-all duration-300 group-hover:translate-x-1"
+          aria-hidden="true"
         >
           <path
             d="M5.25 12.75L12.75 5.25"
