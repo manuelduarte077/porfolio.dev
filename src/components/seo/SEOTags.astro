@@ -88,29 +88,20 @@ const openGraph = {
     ]}
   />
 
-  <script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8106254343727768"
-    crossorigin="anonymous"></script>
-
   <!-- Google tag (gtag.js) -->
   {
     import.meta.env.PROD && (
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z558SE7H78"></script>
-    <script>
-      // @ts-ignore
-      window.dataLayer = window.dataLayer || [];
-      // @ts-ignore
-      function gtag(){dataLayer.push(arguments);}
-      // @ts-ignore
-      gtag("js", new Date());
-
-      // @ts-ignore
-      gtag("config", "G-Z558SE7H78");
-    </script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z558SE7H78" />
+      <script>
+        // @ts-ignore
+        window.dataLayer = window.dataLayer || [];
+        // @ts-ignore
+        function gtag(){dataLayer.push(arguments);}
+        // @ts-ignore
+        gtag("js", new Date());
+        // @ts-ignore
+        gtag("config", "G-Z558SE7H78");
+      </script>
     )
   }
 </head>
-
-

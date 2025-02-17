@@ -11,12 +11,6 @@ import "@/styles/post.css";
 export type Props = HeadTags;
 
 const headTags = Astro.props;
-
-declare global {
-  interface Window {
-    adsbygoogle: any;
-  }
-}
 ---
 
 <!doctype html>
@@ -29,33 +23,5 @@ declare global {
     <BlurCircle position="top" color={theme.colors.blur.top} />
     <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
     <slot />
-
-    <!-- P Horizontal -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8106254343727768"
-      crossorigin="anonymous"></script>
-
-    <!-- Horizontal -->
-    <ins
-      class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-8106254343727768"
-      data-ad-slot="6797815746"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-
-    <!-- POST -->
-    <ins
-      class="adsbygoogle"
-      style="display:block; text-align:center;"
-      data-ad-layout="in-article"
-      data-ad-format="fluid"
-      data-ad-client="ca-pub-8106254343727768"
-      data-ad-slot="3888898600"></ins>
-
-    <script>
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
   </body>
 </html>
