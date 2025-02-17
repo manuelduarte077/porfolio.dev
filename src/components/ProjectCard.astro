@@ -5,7 +5,14 @@ type Props = Project & {
   variant?: "compact" | "grid";
 };
 
-const { title, techs, link, isComingSoon, image, variant = "grid" } = Astro.props;
+const {
+  title,
+  techs,
+  link,
+  isComingSoon,
+  image,
+  variant = "grid",
+} = Astro.props;
 
 const formatTechs = (values: string[]) =>
   values.toString().replaceAll(",", " • ");
@@ -19,21 +26,19 @@ const isCompact = variant === "compact";
       <div
         class:list={[
           "group rounded-md border border-neutral-700 p-4 transition-all duration-300",
-          isCompact ? "flex items-center justify-between gap-4" : "flex flex-col gap-4"
+          isCompact
+            ? "flex items-center justify-between gap-4"
+            : "flex flex-col gap-4",
         ]}
       >
-        <div
-          class:list={[
-            isCompact ? "flex items-center gap-4" : "space-y-4"
-          ]}
-        >
+        <div class:list={[isCompact ? "flex items-center gap-4" : "space-y-4"]}>
           {image && (
             <img
               src={image}
               alt={`Preview de ${title}`}
               class:list={[
                 "rounded-md object-cover",
-                isCompact ? "h-24 w-24" : "h-48 w-full"
+                isCompact ? "h-24 w-24" : "h-48 w-full",
               ]}
               loading="lazy"
             />
@@ -50,24 +55,22 @@ const isCompact = variant === "compact";
         class:list={[
           "group rounded-md border border-neutral-700 p-4 transition-all duration-300",
           "hover:-translate-y-2 hover:border-neutral-400",
-          isCompact ? "flex items-center justify-between gap-4" : "flex flex-col gap-4"
+          isCompact
+            ? "flex items-center justify-between gap-4"
+            : "flex flex-col gap-4",
         ]}
         href={link}
         target="_blank"
         rel="noreferrer"
       >
-        <div
-          class:list={[
-            isCompact ? "flex items-center gap-4" : "space-y-4"
-          ]}
-        >
+        <div class:list={[isCompact ? "flex items-center gap-4" : "space-y-4"]}>
           {image && (
             <img
               src={image}
               alt={`Preview de ${title}`}
               class:list={[
                 "rounded-md object-cover",
-                isCompact ? "h-24 w-24" : "h-48 w-full"
+                isCompact ? "h-24 w-24" : "h-48 w-full",
               ]}
               loading="lazy"
             />

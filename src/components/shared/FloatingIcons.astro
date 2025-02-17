@@ -1,28 +1,30 @@
 ---
-import { techIcons } from '@/data/tech-icons';
+import { techIcons } from "@/data/tech-icons";
 
-const ICON_SIZE = "32px"; // Tamaño fijo para todos los iconos
+const ICON_SIZE = "32px";
 ---
 
 <div class="floating-icons fixed inset-0 -z-10 overflow-hidden">
-  {techIcons.map((icon, index) => (
-    <div 
-      class="icon" 
-      style={`
+  {
+    techIcons.map((icon, index) => (
+      <div
+        class="icon"
+        style={`
         --delay: ${index * 4}s; 
-        --start-x: ${index % 2 === 0 ? '5vw' : '95vw'};
+        --start-x: ${index % 2 === 0 ? "5vw" : "95vw"};
         width: ${ICON_SIZE};
         height: ${ICON_SIZE};
       `}
-    >
-      <img 
-        src={icon.path}
-        alt={icon.name}
-        width={ICON_SIZE}
-        height={ICON_SIZE}
-      />
-    </div>
-  ))}
+      >
+        <img
+          src={icon.path}
+          alt={icon.name}
+          width={ICON_SIZE}
+          height={ICON_SIZE}
+        />
+      </div>
+    ))
+  }
 </div>
 
 <style define:vars={{ iconSize: ICON_SIZE }}>
@@ -67,26 +69,25 @@ const ICON_SIZE = "32px"; // Tamaño fijo para todos los iconos
     }
   }
 
-  /* Diferentes velocidades y patrones de movimiento */
   .icon:nth-child(odd) {
     animation-duration: 40s;
     animation-timing-function: ease-in-out;
   }
-  
+
   .icon:nth-child(3n) {
     animation-duration: 45s;
     left: calc(var(--start-x) + 5vw);
   }
-  
-  .icon:nth-child(3n+1) {
+
+  .icon:nth-child(3n + 1) {
     animation-duration: 50s;
     left: calc(var(--start-x) - 5vw);
   }
 
-  /* Ajuste para que los iconos no interfieran con el contenido */
   @media (max-width: 768px) {
     .icon {
-      --start-x: ${props => props.index % 2 === 0 ? '2vw' : '98vw'};
+      --start-x: ${index % 2 === 0 ? "2vw" : "98vw"};
     }
   }
-</style> 
+</style>
+

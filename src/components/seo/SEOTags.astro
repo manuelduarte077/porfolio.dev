@@ -8,8 +8,8 @@ type Props = HeadTags;
 
 const { title, description, noindex, og } = Astro.props;
 
-const DEFAULT_TITLE_PAGE = "Don Manuel - Software Engineer";
-const DEFAULT_DESCRIPTION_PAGE = "A minimal portfolio website for Don Manuel";
+const DEFAULT_TITLE_PAGE = "Manuel Duarte - Software Engineer";
+const DEFAULT_DESCRIPTION_PAGE = "Software Engineer with a passion for building web and mobile applications.";
 const DEFAULT_URL_SITE = SITE_URL;
 
 const openGraph = {
@@ -41,7 +41,7 @@ const openGraph = {
       },
       optional: {
         locale: "en_US",
-        siteName: "Don Manuel",
+        siteName: "Manuel Duarte",
         description: openGraph.description,
       },
     }}

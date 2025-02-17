@@ -7,16 +7,17 @@
 </button>
 
 <script>
-  const toggle = document.getElementById('reading-mode-toggle');
-  const main = document.querySelector('main');
-  
-  toggle?.addEventListener('click', () => {
-    main?.classList.toggle('reading-mode');
-    
-    if (main?.classList.contains('reading-mode')) {
-      toggle.textContent = 'Normal Mode';
+  const toggle = document.getElementById("reading-mode-toggle");
+  const main = document.querySelector("main");
+
+  toggle?.addEventListener("click", () => {
+    main?.classList.toggle("reading-mode");
+
+    if (main?.classList.contains("reading-mode")) {
+      toggle.textContent = "Normal Mode";
     } else {
-      toggle.textContent = 'Reading Mode';
+      toggle.textContent = "Reading Mode";
     }
   });
-</script> 
+</script>
+

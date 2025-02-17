@@ -11,10 +11,8 @@ import ProjectCard from "@/components/ProjectCard.astro";
     <article class="flex flex-col gap-8">
       {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map(project => (
-          <ProjectCard {...project} />
-        ))}
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {projects.map((project) => <ProjectCard {...project} />)}
       </div>
     </article>
   </main>
