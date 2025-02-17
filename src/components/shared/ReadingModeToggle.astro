@@ -1,0 +1,22 @@
+<button
+  id="reading-mode-toggle"
+  class="mb-4 self-end rounded-md bg-neutral-800 px-4 py-2 text-sm text-neutral-100 transition-all hover:bg-neutral-700"
+  aria-label="Toggle reading mode"
+>
+  Reading Mode
+</button>
+
+<script>
+  const toggle = document.getElementById('reading-mode-toggle');
+  const main = document.querySelector('main');
+  
+  toggle?.addEventListener('click', () => {
+    main?.classList.toggle('reading-mode');
+    
+    if (main?.classList.contains('reading-mode')) {
+      toggle.textContent = 'Normal Mode';
+    } else {
+      toggle.textContent = 'Reading Mode';
+    }
+  });
+</script> 
