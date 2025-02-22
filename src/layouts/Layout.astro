@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import BlurCircle from "@/components/shared/BlurCircle.astro";
+import FloatingIcons from "@/components/shared/FloatingIcons.astro";
 import theme from "@/data/theme";
 import SEOTags from "@/components/seo/SEOTags.astro";
 import type { HeadTags } from "@/utils/types/HeadTags";
@@ -11,12 +12,6 @@ import "@/styles/post.css";
 export type Props = HeadTags;
 
 const headTags = Astro.props;
-
-declare global {
-  interface Window {
-    adsbygoogle: any;
-  }
-}
 ---
 
 <!doctype html>
@@ -25,37 +20,10 @@ declare global {
   <body
     class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16"
   >
+    <FloatingIcons />
     <Header />
     <BlurCircle position="top" color={theme.colors.blur.top} />
     <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
     <slot />
-
-    <!-- P Horizontal -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8106254343727768"
-      crossorigin="anonymous"></script>
-
-    <!-- Horizontal -->
-    <ins
-      class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-8106254343727768"
-      data-ad-slot="6797815746"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-
-    <!-- POST -->
-    <ins
-      class="adsbygoogle"
-      style="display:block; text-align:center;"
-      data-ad-layout="in-article"
-      data-ad-format="fluid"
-      data-ad-client="ca-pub-8106254343727768"
-      data-ad-slot="3888898600"></ins>
-
-    <script>
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
   </body>
 </html>

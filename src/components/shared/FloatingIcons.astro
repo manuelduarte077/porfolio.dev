@@ -1,0 +1,93 @@
+---
+import { techIcons } from "@/data/tech-icons";
+
+const ICON_SIZE = "32px";
+---
+
+<div class="floating-icons fixed inset-0 -z-10 overflow-hidden">
+  {
+    techIcons.map((icon, index) => (
+      <div
+        class="icon"
+        style={`
+        --delay: ${index * 4}s; 
+        --start-x: ${index % 2 === 0 ? "5vw" : "95vw"};
+        width: ${ICON_SIZE};
+        height: ${ICON_SIZE};
+      `}
+      >
+        <img
+          src={icon.path}
+          alt={icon.name}
+          width={ICON_SIZE}
+          height={ICON_SIZE}
+        />
+      </div>
+    ))
+  }
+</div>
+
+<style define:vars={{ iconSize: ICON_SIZE }}>
+  .floating-icons {
+    pointer-events: none;
+    background: radial-gradient(
+      circle at 50% 50%,
+      transparent 20%,
+      rgba(26, 26, 26, 0.8) 80%
+    );
+  }
+
+  .icon {
+    position: absolute;
+    animation: float 35s linear infinite;
+    animation-delay: var(--delay);
+    left: var(--start-x);
+    top: 60px;
+    opacity: 0;
+  }
+
+  .icon img {
+    width: var(--iconSize);
+    height: var(--iconSize);
+    object-fit: contain;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+    5% {
+      opacity: 0.8;
+    }
+    95% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(calc(100vh - 60px)) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .icon:nth-child(odd) {
+    animation-duration: 40s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .icon:nth-child(3n) {
+    animation-duration: 45s;
+    left: calc(var(--start-x) + 5vw);
+  }
+
+  .icon:nth-child(3n + 1) {
+    animation-duration: 50s;
+    left: calc(var(--start-x) - 5vw);
+  }
+
+  @media (max-width: 768px) {
+    .icon {
+      --start-x: ${index % 2 === 0 ? "2vw" : "98vw"};
+    }
+  }
+</style>
+
