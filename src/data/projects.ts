@@ -23,13 +23,13 @@ const projects: Project[] = [
   {
     title: "Wonder Noty App",
     techs: ["React Native (Expo)", "Javascript"],
-    link: "https://app.noty.donmanuel.dev/link",
+    link: "https://noty.donmanuel.dev/",
     image: "/posts/amogus.jpeg",
   },
   {
     title: "NotedUp",
     techs: ["Dart (Flutter)", "Android", "iOS", "Firebase"],
-    link: "https://app.notedup.donmanuel.dev/app",
+    link: "https://notedup.donmanuel.dev/",
     image: "/posts/amogus.jpeg",
   },
   {
@@ -48,12 +48,6 @@ const projects: Project[] = [
     title: "Wonder Link",
     techs: ["React", "Typescript", "TailwindCSS", "NodeJS", "MongoDB"],
     link: "https://link.wondertech.dev/",
-    image: "/posts/amogus.jpeg",
-  },
-  {
-    title: "Expo Wallpaper",
-    techs: ["Javascript", "Expo", "React Native"],
-    link: "https://expo-wallpaper.donmanuel.dev/",
     image: "/posts/amogus.jpeg",
   },
   {

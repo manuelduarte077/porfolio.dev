@@ -14,9 +14,8 @@ type Presentation = {
 const presentation: Presentation = {
   mail: "hello@donmanuel.dev",
   title: "Hi, I'm Manuel 👋",
-  // profile: "/profile.webp",
   description:
-    "Hello! I'm a *Software Engineer* with *4+ years of experience* specializing in mobile development. I work primarily with *React Native, Swift, and Kotlin*. Currently exploring Kotlin Multiplatform and React. Outside of work, I enjoy playing FIFA.",
+    "Hello! I'm a *Software Engineer* with *4+ years of experience* specializing in mobile development. I work primarily with *Swift, and Kotlin*. Currently exploring Kotlin Multiplatform and .NET. Outside of work, I enjoy playing FIFA.",
   socials: [
     {
       label: "X",

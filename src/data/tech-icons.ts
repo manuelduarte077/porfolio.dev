@@ -1,23 +1,7 @@
 export const techIcons = [
   {
-    name: "React",
-    path: "/svg/React_light.svg",
-  },
-  {
     name: "Firebase",
     path: "/svg/firebase.svg",
-  },
-  {
-    name: "TypeScript",
-    path: "/svg/typescript.svg",
-  },
-  {
-    name: "Expo",
-    path: "/svg/expo.svg",
-  },
-  {
-    name: "JavaScript",
-    path: "/svg/javascript.svg",
   },
   {
     name: "Java",
