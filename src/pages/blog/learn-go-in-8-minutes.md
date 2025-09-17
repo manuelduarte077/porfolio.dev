@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: Learn Go in 8 minutes
 description: Learning the basics of Go and how it works. I chose Go as a starting language here because of its ease of use and performance.
 tags: ["code", "go", "learn"]
-time: 4
+time: 8
 featured: true
 timestamp: 2021-06-01T02:39:03+00:00 
 filename: learn-go-in-8-minutes

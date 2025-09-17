@@ -3,11 +3,11 @@ layout: ../../layouts/ProjectLayout.astro
 title: Todo Anotadito
 description: Tu lista de compras, clara y sin enredos
 tags: ["iOS", "swift", "swiftui", "swiftdata"]
-liveUrl: https://apps.apple.com/ni/app/cuenta-clara/id6743010799?l=en-GB
+liveUrl: https://todoanotadito.donmanuel.dev/
 timestamp: 2025-03-24T23:59:00+00:00
 featured: true
 filename: todoanotadito
-platform: iOS
+platform: web
 ---
 
 ## The Details

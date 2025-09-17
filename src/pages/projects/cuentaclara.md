@@ -7,7 +7,7 @@ liveUrl: https://apps.apple.com/ni/app/cuenta-clara/id6743010799?l=en-GB
 timestamp: 2025-03-24T23:59:00+00:00
 featured: true
 filename: cuentaclara
-platform: web
+platform: iOS
 ---
 
 ## The Details
