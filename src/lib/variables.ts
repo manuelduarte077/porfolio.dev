@@ -2,7 +2,7 @@
 
 export const GLOBAL = {
   // Site metadata
-  username: "Don Manuel's",
+  username: "Don Manuel",
   rootUrl: "https://donmanuel.dev",
   shortDescription: "Software Engineer and Tech Enthusiast.",
   longDescription: "Mobile developer with experience in Android (Kotlin) and iOS (Swift, Objective-C), and cross-platform development with Flutter.",
@@ -32,7 +32,7 @@ export const GLOBAL = {
   projectLongDescription: "All of my projects, including both frontend and full-stack applications.",
 
   // Profile image
-  profileImage: "michael-dam-unsplash.webp",
+  profileImage: "https://avatars.githubusercontent.com/u/46093689?v=4",
 
   // Menu items
   menu: {
