@@ -15,8 +15,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
     <AnimatePresence>
       {project && (
-        <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6"
+        <div
+          className="fixed inset-0 z-100 flex items-center justify-center p-4 md:p-6"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
@@ -42,7 +42,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-surface border border-border-main rounded-2xl md:rounded-3xl shadow-2xl focus:outline-none"
             tabIndex={-1}
           >
-            {/* Close Button */}
             <button
               onClick={onClose}
               className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-full bg-bg/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none hover:bg-accent/10 text-muted hover:text-accent transition-colors z-10 focus-visible:ring-2 focus-visible:ring-accent"

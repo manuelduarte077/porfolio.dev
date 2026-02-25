@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
         stiffness: 300,
         damping: 20
       }}
-      className="group relative border-b border-border-main py-12 flex flex-col md:flex-row gap-8 md:items-center justify-between hover:bg-accent/[0.02] px-4 transition-all duration-500 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+      className="group relative border-b border-border-main py-12 flex flex-col md:flex-row gap-8 md:items-center justify-between hover:bg-accent/2 px-4 transition-all duration-500 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
     >
       <div className="flex-1">
         <div className="flex items-center gap-3 mb-2">
