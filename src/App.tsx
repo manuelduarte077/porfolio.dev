@@ -11,6 +11,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { Project } from "./types";
 import { useLanguage } from "./context/LanguageContext";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <div className="bg-bg min-h-screen">
+      <SpeedInsights />
       <Navbar />
 
       <main>
