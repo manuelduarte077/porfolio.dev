@@ -88,8 +88,6 @@ export const en = {
   "experience.title": "Experience",
   "experience.software-engineer-independent.description":
     "Specialized in developing high-performance native applications for iOS and Android. Architected and deployed scalable backend solutions using C# and .NET, integrated with PostgreSQL and Firebase. Published multiple successful apps on the App Store and Google Play, including Veerla, Cuenta Clara, and Todo Anotadito.",
-  "experience.lomas-club-dev.description":
-    "Led the development of the official Lomas Club mobile application. Implemented exclusive member features, real-time event notifications, and a seamless digital experience for club services using SwiftUI and Firebase.",
-  "experience.tech-writer.description":
-    "Educating the developer community through in-depth technical articles. Focused on simplifying complex concepts in Mobile Development, Go, and Python. Reached thousands of developers through platforms like Dev.to and personal blog.",
+  "experience.software-engineer-novacomp.description":
+    "As a Software Engineer II, I am responsible for developing and maintaining high-performance native applications for iOS and Android. I also design and implement scalable backend solutions using C# and .NET, integrated with SQLServer and Azure.",
 };

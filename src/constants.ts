@@ -1,4 +1,4 @@
-import { Project, Article, Experience } from "./types";
+import { Project, Experience } from "./types";
 
 export const PROJECTS: Project[] = [
   {
@@ -70,45 +70,73 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: "software-engineer-independent",
-    company: "Independent / Freelance",
-    position: "Software Engineer (Mobile & Backend)",
-    period: "Jan 2021 - Present",
-    description:
-      "Specialized in developing high-performance native applications for iOS and Android. Architected and deployed scalable backend solutions using C# and .NET, integrated with PostgreSQL and Firebase. Published multiple successful apps on the App Store and Google Play, including Veerla, Cuenta Clara, and Todo Anotadito.",
+    id: "software-engineer-ii",
+    company: "Novacomp",
+    position: "Software Engineer II",
+    period: "Sep 2024 - Present",
+    description: "As a Software Engineer II, I am responsible for developing and maintaining high-performance native applications for iOS and Android. I also design and implement scalable backend solutions using C# and .NET, integrated with SQLServer and Azure.",
     technologies: [
-      "Kotlin",
-      "Swift",
-      "SwiftUI",
+      "Java",
+      "Objective-C",
       "C#",
       ".NET",
-      "PostgreSQL",
-      "Firebase",
-      "KMP",
+      "SQLServer",
+      "Azure"
     ],
+    location: "remote",
+    type: "full-time",
   },
   {
-    id: "lomas-club-dev",
-    company: "Lomas Club",
+    id: "mobile-developer",
+    company: "Socialenials",
     position: "Mobile Developer",
-    period: "Aug 2023 - Dec 2024",
-    description:
-      "Led the development of the official Lomas Club mobile application. Implemented exclusive member features, real-time event notifications, and a seamless digital experience for club services using SwiftUI and Firebase.",
-    technologies: ["Swift", "SwiftUI", "Firebase", "iOS Development"],
+    period: "Sep 2023 - Feb 2026",
+    description: "Developed and maintained the official Socialenials mobile application using Flutter and Firebase.",
+    technologies: [
+      "Dart",
+      "Flutter",
+      "Firebase",
+      "BloC",
+      "PixelPay"
+    ],
+    location: "remote",
+    type: "part-time",
   },
   {
-    id: "tech-writer",
-    company: "donmanuel.dev / Dev.to",
-    position: "Technical Content Creator",
-    period: "Mar 2021 - Present",
-    description:
-      "Educating the developer community through in-depth technical articles. Focused on simplifying complex concepts in Mobile Development, Go, and Python. Reached thousands of developers through platforms like Dev.to and personal blog.",
+    id: "mobile-developer-flutter",
+    company: "Disruptive Studio, Inc",
+    position: "Mobile Developer",
+    period: "June 2024 - Sep 2024",
+    description: "Developed a crypto wallet application using Flutter.",
     technologies: [
-      "Technical Writing",
-      "SEO",
-      "Go",
-      "Python",
-      "Community Building",
+      "Dart",
+      "Flutter",
+      "Wallet",
+      "BloC",
+      "Crypto",
+      "Blockchain"
     ],
+    location: "remote",
+    type: "full-time",
+  },
+  {
+    id: "software-engineer",
+    company: "Nerdify",
+    position: "Software Engineer",
+    period: "Feb 2022 - Jun 2024",
+    description: "Developed and maintained the official Nerdify mobile application using React Native and Firebase.",
+    technologies: [
+      "Dart",
+      "Flutter",
+      "BloC",
+      "OneSignal",
+      "Firebase",
+      "GraphQL",
+      "React Native",
+      "Expo",
+      "React"
+    ],
+    location: "on-site",
+    type: "full-time",
   },
 ];

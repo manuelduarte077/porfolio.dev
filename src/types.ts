@@ -21,9 +21,11 @@ export interface Article {
 
 export interface Experience {
   id: string;
-  company: string;
+  company: string;  
   position: string;
   period: string;
   description: string;
   technologies?: string[];
+  location?: "remote" | "on-site" | "hybrid";
+  type?: "full-time" | "part-time" | "contract" | "freelance";
 }
