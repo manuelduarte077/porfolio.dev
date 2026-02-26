@@ -86,8 +86,12 @@ export const en = {
   "skills.soft.technicalWriting": "Technical Writing",
   "skills.soft.mentoring": "Mentoring",
   "experience.title": "Experience",
-  "experience.software-engineer-independent.description":
-    "Specialized in developing high-performance native applications for iOS and Android. Architected and deployed scalable backend solutions using C# and .NET, integrated with PostgreSQL and Firebase. Published multiple successful apps on the App Store and Google Play, including Veerla, Cuenta Clara, and Todo Anotadito.",
-  "experience.software-engineer-novacomp.description":
+  "experience.software-engineer-ii.description":
     "As a Software Engineer II, I am responsible for developing and maintaining high-performance native applications for iOS and Android. I also design and implement scalable backend solutions using C# and .NET, integrated with SQLServer and Azure.",
+  "experience.mobile-developer.description":
+    "Developed and maintained the official Socialenials mobile application using Flutter and Firebase.",
+  "experience.mobile-developer-flutter.description":
+    "Developed a crypto wallet application using Flutter.",
+  "experience.software-engineer.description":
+    "Developed and maintained the official Nerdify mobile application using React Native and Firebase.",
 };

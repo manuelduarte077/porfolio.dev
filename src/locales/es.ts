@@ -88,10 +88,12 @@ export const es = {
   "skills.soft.technicalWriting": "Escritura Técnica",
   "skills.soft.mentoring": "Mentoría",
   "experience.title": "Experiencia",
-  "experience.software-engineer-independent.description":
-    "Especializado en el desarrollo de aplicaciones nativas de alto rendimiento para iOS y Android. Arquitecturé y desplegué soluciones backend escalables utilizando C# y .NET, integradas con PostgreSQL y Firebase. Publiqué múltiples aplicaciones exitosas en la App Store y Google Play, incluyendo Veerla, Cuenta Clara y Todo Anotadito.",
-  "experience.lomas-club-dev.description":
-    "Lideré el desarrollo de la aplicación móvil oficial de Lomas Club. Implementé funciones exclusivas para socios, notificaciones de eventos en tiempo real y una experiencia digital fluida para los servicios del club utilizando SwiftUI y Firebase.",
-  "experience.tech-writer.description":
-    "Educando a la comunidad de desarrolladores a través de artículos técnicos profundos. Enfocado en simplificar conceptos complejos en Desarrollo Móvil, Go y Python. Alcancé a miles de desarrolladores a través de plataformas como Dev.to y blog personal.",
+  "experience.software-engineer-ii.description":
+    "Como Ingeniero de Software II, soy responsable de desarrollar y mantener aplicaciones nativas de alto rendimiento para iOS y Android. También diseño y implemento soluciones backend escalables usando C# y .NET, integradas con SQLServer y Azure.",
+  "experience.mobile-developer.description":
+    "Desarrollé y mantuve la aplicación móvil oficial de Socialenials usando Flutter y Firebase.",
+  "experience.mobile-developer-flutter.description":
+    "Desarrollé una aplicación de billetera criptográfica usando Flutter.",
+  "experience.software-engineer.description":
+    "Desarrollé y mantuve la aplicación móvil oficial de Nerdify usando React Native y Firebase.",
 };
