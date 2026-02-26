@@ -56,17 +56,6 @@ export const PROJECTS: Project[] = [
     type: "Android",
   },
   {
-    id: "lomas-club",
-    title: "Lomas Club App",
-    description: "Lomas Club App - Exclusive experience for members.",
-    longDescription:
-      "Lomas Club App provides an exclusive digital experience for club members, allowing them to access services, events, and community features directly from their mobile devices.",
-    technologies: ["Swift", "SwiftUI", "Firebase"],
-    tags: ["Swift", "SwiftUI", "iOS"],
-    link: "https://apps.apple.com/ni/app/lomas-club-app/id6470324204?l=en-GB",
-    type: "iOS",
-  },
-  {
     id: "tucambio",
     title: "TuCambio",
     description: "Check exchange rates in Nicaragua in real-time.",

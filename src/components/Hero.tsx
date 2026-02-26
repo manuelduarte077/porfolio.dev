@@ -39,8 +39,8 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-6">
               <a
-                href="/resume.pdf"
-                download
+                href="/CV-Manuel-Duarte.pdf"
+                download="CV-Manuel-Duarte.pdf"
                 className="flex items-center gap-2 px-6 py-3 bg-accent text-bg rounded-full text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-opacity"
               >
                 <FileText size={16} />
