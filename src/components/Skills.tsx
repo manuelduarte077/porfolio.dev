@@ -42,7 +42,6 @@ export default function Skills() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* Technical Skills */}
           <div className="lg:col-span-8">
             <h3 className="text-xs uppercase tracking-widest text-muted mb-8 font-bold">
               {t("skills.technical")}
@@ -85,7 +84,6 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Soft Skills */}
           <div className="lg:col-span-4">
             <h3 className="text-xs uppercase tracking-widest text-muted mb-8 font-bold">
               {t("skills.soft")}

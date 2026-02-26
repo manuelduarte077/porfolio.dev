@@ -24,7 +24,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             if (e.key === "Escape") onClose();
           }}
         >
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,7 +33,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             aria-hidden="true"
           />
 
-          {/* Modal Content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}

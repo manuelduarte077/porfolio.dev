@@ -11,7 +11,6 @@ export default function Navbar() {
   const navLinks = [
     { name: t("nav.home"), href: "#home" },
     { name: t("nav.projects"), href: "#projects" },
-    // { name: t('nav.articles'), href: '#articles' },
     { name: t("nav.experience"), href: "#experience" },
     { name: t("nav.about"), href: "#about" },
     { name: t("nav.skills"), href: "#skills" },
@@ -33,12 +32,11 @@ export default function Navbar() {
           DON MANUEL
         </motion.a>
 
-        {/* Desktop Links & Toggle */}
         <div className="hidden md:flex items-center gap-8">
           <div className="flex gap-8">
             {navLinks.map((link, i) => (
               <motion.a
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -63,7 +61,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
           <button
             onClick={toggleLanguage}
@@ -87,7 +84,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -102,7 +98,7 @@ export default function Navbar() {
             <div className="p-8 flex flex-col gap-6">
               {navLinks.map((link, i) => (
                 <motion.a
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
