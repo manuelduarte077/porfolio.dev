@@ -10,12 +10,12 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const { t } = useLanguage();
-  if (!project) return null;
 
   return (
     <AnimatePresence>
-      {project && (
+      {project ? (
         <div
+          key={project.id}
           className="fixed inset-0 z-100 flex items-center justify-center p-4 md:p-6"
           role="dialog"
           aria-modal="true"
@@ -152,7 +152,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </motion.div>
         </div>
-      )}
+      ) : null}
     </AnimatePresence>
   );
 }
