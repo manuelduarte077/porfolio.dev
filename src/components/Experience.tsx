@@ -17,7 +17,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter uppercase">
             {t("experience.title")}
           </h2>
-          <span className="text-xs font-mono text-muted">/003</span>
+          <span className="text-xs font-mono text-muted">/002</span>
         </motion.div>
 
         <div className="space-y-12">

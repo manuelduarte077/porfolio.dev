@@ -38,7 +38,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter uppercase">
             {t("skills.title")}
           </h2>
-          <span className="text-xs font-mono text-muted">/005</span>
+          <span className="text-xs font-mono text-muted">/004</span>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">

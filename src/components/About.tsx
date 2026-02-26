@@ -16,7 +16,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter">
             {t("about.title")}
           </h2>
-          <span className="text-xs font-mono text-muted">/004</span>
+          <span className="text-xs font-mono text-muted">/003</span>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
