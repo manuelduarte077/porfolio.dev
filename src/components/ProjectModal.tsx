@@ -39,7 +39,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-surface border border-border-main rounded-2xl md:rounded-3xl shadow-2xl focus:outline-none"
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-surface border border-border-main rounded-2xl md:rounded-3xl shadow-2xl focus:outline-none text-accent"
             tabIndex={-1}
           >
             <button
@@ -68,7 +68,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
               <h2
                 id="modal-title"
-                className="text-3xl md:text-6xl font-display font-bold tracking-tighter mb-6 md:mb-8 pr-12"
+                className="text-3xl md:text-6xl font-display font-bold tracking-tighter mb-6 md:mb-8 pr-12 text-accent"
               >
                 {project.title}
               </h2>
@@ -105,31 +105,37 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
 
                 <div className="lg:col-span-5 space-y-6">
-                  <div className="p-6 rounded-2xl bg-bg/50 border border-border-main space-y-6">
-                    <h3 className="text-xs uppercase tracking-widest text-muted font-bold">
-                      {t("modal.links")}
-                    </h3>
-                    <div className="flex flex-col gap-3">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-4 rounded-xl bg-accent text-white font-semibold hover:opacity-90 transition-opacity"
-                      >
-                        {t("modal.live")} <ExternalLink size={18} />
-                      </a>
-                      {project.repoLink && (
-                        <a
-                          href={project.repoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-between p-4 rounded-xl border border-border-main hover:bg-accent/5 transition-colors font-semibold"
-                        >
-                          {t("modal.repo")} <Github size={18} />
-                        </a>
-                      )}
+                  {(project.link || project.repoLink) && (
+                    <div className="p-6 rounded-2xl bg-bg/50 border border-border-main space-y-6">
+                      <h3 className="text-xs uppercase tracking-widest text-muted font-bold">
+                        {t("modal.links")}
+                      </h3>
+
+                      <div className="flex flex-col gap-3">
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between p-4 rounded-xl font-semibold bg-accent text-bg hover:opacity-90 transition-opacity"
+                          >
+                            {t("modal.live")} <ExternalLink size={18} className="shrink-0" />
+                          </a>
+                        )}
+
+                        {project.repoLink && (
+                          <a
+                            href={project.repoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between p-4 rounded-xl bg-surface border border-border-main hover:bg-accent/10 text-accent transition-colors font-semibold"
+                          >
+                            {t("modal.repo")} <Github size={18} className="shrink-0 text-muted" />
+                          </a>
+                        )}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   <div className="aspect-video rounded-2xl overflow-hidden border border-border-main">
                     <img

@@ -77,47 +77,6 @@ export const PROJECTS: Project[] = [
     link: "https://apps.apple.com/ni/app/tucambio/id6744262206?l=en-GB",
     type: "iOS",
   },
-  {
-    id: "pexels-kmp",
-    title: "Pexels KMP",
-    description: "Multiplatform image browser using Pexels API.",
-    longDescription:
-      "Pexels KMP is a Kotlin Multiplatform application that displays high-quality images from the Pexels API, demonstrating the power of shared code between Android and iOS.",
-    technologies: ["Kotlin", "Compose Multiplatform", "Ktor", "Pexels API"],
-    tags: ["Kotlin", "KMP", "Android", "iOS"],
-    link: "https://github.com/manuelduarte077/PexelsKMP",
-    type: "Multiplatform",
-  },
-];
-
-export const ARTICLES: Article[] = [
-  {
-    id: "libros-desarrollo",
-    title: "Los 10 Mejores Libros de Desarrollo de Software",
-    description:
-      "El desarrollo de software es un campo en constante evolución, y mantenerse al día es clave.",
-    date: "Mar 19, 2024",
-    readTime: "8 min",
-    link: "https://www.donmanuel.dev/blog/los-10-mejores-libros-de-desarrollo-de-software",
-  },
-  {
-    id: "learn-go",
-    title: "Learn Go in 8 minutes",
-    description:
-      "Learning the basics of Go and how it works. A great starting language.",
-    date: "Jun 1, 2021",
-    readTime: "8 min",
-    link: "https://www.donmanuel.dev/blog/learn-go-in-8-minutes",
-  },
-  {
-    id: "diccionario-datos",
-    title: "¿Qué es un Diccionario de datos?",
-    description:
-      "Un diccionario en Python es una colección de elementos clave-valor.",
-    date: "Mar 21, 2021",
-    readTime: "4 min",
-    link: "https://www.donmanuel.dev/blog/que-es-un-diccionario-de-datos",
-  },
 ];
 
 export const EXPERIENCES: Experience[] = [

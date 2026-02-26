@@ -5,7 +5,7 @@ export interface Project {
   longDescription?: string;
   technologies?: string[];
   tags: string[];
-  link: string;
+  link?: string;
   repoLink?: string;
   type: "iOS" | "Android" | "Web" | "Cross-platform" | "Multiplatform";
 }

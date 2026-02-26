@@ -82,6 +82,19 @@ export default function ProjectCard({
       </div>
 
       <div className="flex items-center gap-6">
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-muted hover:text-accent transition-colors border border-border-main px-3 py-1.5 rounded-full hover:border-accent/30"
+            aria-label={`${project.title} ${t("modal.live")}`}
+          >
+            <ExternalLink size={16} />
+            {t("modal.live")}
+          </a>
+        )}
         {project.repoLink && (
           <a
             href={project.repoLink}
@@ -92,12 +105,9 @@ export default function ProjectCard({
             aria-label={`${project.title} GitHub Repository`}
           >
             <Github size={16} />
-            Repo
+            {t("modal.repo")}
           </a>
         )}
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest font-semibold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
-          {t("project.view")} <ExternalLink size={14} />
-        </div>
       </div>
     </motion.div>
   );
