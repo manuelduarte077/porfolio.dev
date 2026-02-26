@@ -78,7 +78,7 @@ export default function Skills() {
               ))}
             </div>
 
-            <div className="mt-12 p-8 rounded-3xl border border-dashed border-border-main bg-accent/[0.01]">
+            <div className="mt-12 p-8 rounded-3xl border border-dashed border-border-main bg-accent/1">
               <p className="text-muted leading-relaxed italic">
                 "{t("skills.quote")}"
               </p>
