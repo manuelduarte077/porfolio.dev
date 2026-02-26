@@ -21,7 +21,7 @@ export interface Article {
 
 export interface Experience {
   id: string;
-  company: string;  
+  company: string;
   position: string;
   period: string;
   description: string;

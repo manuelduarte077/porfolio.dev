@@ -119,7 +119,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 rounded-xl font-semibold bg-accent text-bg hover:opacity-90 transition-opacity"
                           >
-                            {t("modal.live")} <ExternalLink size={18} className="shrink-0" />
+                            {t("modal.live")}{" "}
+                            <ExternalLink size={18} className="shrink-0" />
                           </a>
                         )}
 
@@ -130,7 +131,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 rounded-xl bg-surface border border-border-main hover:bg-accent/10 text-accent transition-colors font-semibold"
                           >
-                            {t("modal.repo")} <Github size={18} className="shrink-0 text-muted" />
+                            {t("modal.repo")}{" "}
+                            <Github size={18} className="shrink-0 text-muted" />
                           </a>
                         )}
                       </div>

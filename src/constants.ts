@@ -74,15 +74,9 @@ export const EXPERIENCES: Experience[] = [
     company: "Novacomp",
     position: "Software Engineer II",
     period: "Sep 2024 - Present",
-    description: "As a Software Engineer II, I am responsible for developing and maintaining high-performance native applications for iOS and Android. I also design and implement scalable backend solutions using C# and .NET, integrated with SQLServer and Azure.",
-    technologies: [
-      "Java",
-      "Objective-C",
-      "C#",
-      ".NET",
-      "SQLServer",
-      "Azure"
-    ],
+    description:
+      "As a Software Engineer II, I am responsible for developing and maintaining high-performance native applications for iOS and Android. I also design and implement scalable backend solutions using C# and .NET, integrated with SQLServer and Azure.",
+    technologies: ["Java", "Objective-C", "C#", ".NET", "SQLServer", "Azure"],
     location: "remote",
     type: "full-time",
   },
@@ -91,14 +85,9 @@ export const EXPERIENCES: Experience[] = [
     company: "Socialenials",
     position: "Mobile Developer",
     period: "Sep 2023 - Feb 2026",
-    description: "Developed and maintained the official Socialenials mobile application using Flutter and Firebase.",
-    technologies: [
-      "Dart",
-      "Flutter",
-      "Firebase",
-      "BloC",
-      "PixelPay"
-    ],
+    description:
+      "Developed and maintained the official Socialenials mobile application using Flutter and Firebase.",
+    technologies: ["Dart", "Flutter", "Firebase", "BloC", "PixelPay"],
     location: "remote",
     type: "part-time",
   },
@@ -108,14 +97,7 @@ export const EXPERIENCES: Experience[] = [
     position: "Mobile Developer",
     period: "June 2024 - Sep 2024",
     description: "Developed a crypto wallet application using Flutter.",
-    technologies: [
-      "Dart",
-      "Flutter",
-      "Wallet",
-      "BloC",
-      "Crypto",
-      "Blockchain"
-    ],
+    technologies: ["Dart", "Flutter", "Wallet", "BloC", "Crypto", "Blockchain"],
     location: "remote",
     type: "full-time",
   },
@@ -124,7 +106,8 @@ export const EXPERIENCES: Experience[] = [
     company: "Nerdify",
     position: "Software Engineer",
     period: "Feb 2022 - Jun 2024",
-    description: "Developed and maintained the official Nerdify mobile application using React Native and Firebase.",
+    description:
+      "Developed and maintained the official Nerdify mobile application using React Native and Firebase.",
     technologies: [
       "Dart",
       "Flutter",
@@ -134,7 +117,7 @@ export const EXPERIENCES: Experience[] = [
       "GraphQL",
       "React Native",
       "Expo",
-      "React"
+      "React",
     ],
     location: "on-site",
     type: "full-time",
