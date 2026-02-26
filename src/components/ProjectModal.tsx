@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink, Github, Code2 } from 'lucide-react';
-import { Project } from '../types';
-import { useLanguage } from '../context/LanguageContext';
+import { motion, AnimatePresence } from "motion/react";
+import { X, ExternalLink, Github, Code2 } from "lucide-react";
+import { Project } from "../types";
+import { useLanguage } from "../context/LanguageContext";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -21,7 +21,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           aria-modal="true"
           aria-labelledby="modal-title"
           onKeyDown={(e) => {
-            if (e.key === 'Escape') onClose();
+            if (e.key === "Escape") onClose();
           }}
         >
           {/* Backdrop */}
@@ -56,21 +56,29 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <span className="text-[10px] uppercase tracking-widest text-accent border border-accent/30 px-3 py-1 rounded-full font-bold">
                   {project.type}
                 </span>
-                {project.tags.map(tag => (
-                  <span key={tag} className="text-[10px] text-muted/60 uppercase tracking-tighter">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] text-muted/60 uppercase tracking-tighter"
+                  >
                     #{tag}
                   </span>
                 ))}
               </div>
 
-              <h2 id="modal-title" className="text-3xl md:text-6xl font-display font-bold tracking-tighter mb-6 md:mb-8 pr-12">
+              <h2
+                id="modal-title"
+                className="text-3xl md:text-6xl font-display font-bold tracking-tighter mb-6 md:mb-8 pr-12"
+              >
                 {project.title}
               </h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
                 <div className="lg:col-span-7 space-y-8">
                   <div>
-                    <h3 className="text-xs uppercase tracking-widest text-muted mb-4 font-bold">{t('modal.overview')}</h3>
+                    <h3 className="text-xs uppercase tracking-widest text-muted mb-4 font-bold">
+                      {t("modal.overview")}
+                    </h3>
                     <p className="text-lg text-muted leading-relaxed">
                       {t(`project.${project.id}.longDescription`)}
                     </p>
@@ -78,10 +86,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                   {project.technologies && (
                     <div>
-                      <h3 className="text-xs uppercase tracking-widest text-muted mb-4 font-bold">{t('modal.stack')}</h3>
+                      <h3 className="text-xs uppercase tracking-widest text-muted mb-4 font-bold">
+                        {t("modal.stack")}
+                      </h3>
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.map(tech => (
-                          <div key={tech} className="flex items-center gap-2 bg-accent/5 border border-border-main px-4 py-2 rounded-xl text-sm text-muted">
+                        {project.technologies.map((tech) => (
+                          <div
+                            key={tech}
+                            className="flex items-center gap-2 bg-accent/5 border border-border-main px-4 py-2 rounded-xl text-sm text-muted"
+                          >
                             <Code2 size={14} className="text-accent" />
                             {tech}
                           </div>
@@ -93,7 +106,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                 <div className="lg:col-span-5 space-y-6">
                   <div className="p-6 rounded-2xl bg-bg/50 border border-border-main space-y-6">
-                    <h3 className="text-xs uppercase tracking-widest text-muted font-bold">{t('modal.links')}</h3>
+                    <h3 className="text-xs uppercase tracking-widest text-muted font-bold">
+                      {t("modal.links")}
+                    </h3>
                     <div className="flex flex-col gap-3">
                       <a
                         href={project.link}
@@ -101,7 +116,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                         rel="noopener noreferrer"
                         className="flex items-center justify-between p-4 rounded-xl bg-accent text-white font-semibold hover:opacity-90 transition-opacity"
                       >
-                        {t('modal.live')} <ExternalLink size={18} />
+                        {t("modal.live")} <ExternalLink size={18} />
                       </a>
                       {project.repoLink && (
                         <a
@@ -110,7 +125,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                           rel="noopener noreferrer"
                           className="flex items-center justify-between p-4 rounded-xl border border-border-main hover:bg-accent/5 transition-colors font-semibold"
                         >
-                          {t('modal.repo')} <Github size={18} />
+                          {t("modal.repo")} <Github size={18} />
                         </a>
                       )}
                     </div>

@@ -1,6 +1,6 @@
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
-import { motion } from 'motion/react';
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
+import { motion } from "motion/react";
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -13,7 +13,7 @@ export default function ThemeToggle() {
       className="p-2 rounded-full glass text-accent hover:bg-accent/10 transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+      {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
     </motion.button>
   );
 }

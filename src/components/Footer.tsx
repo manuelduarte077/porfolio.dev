@@ -1,23 +1,40 @@
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
   const social = [
-    { icon: Github, href: 'https://github.com/manuelduarte077', label: 'GitHub' },
-    { icon: Twitter, href: 'https://twitter.com/manuelduarte077', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/manuelduarte077', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:hello@donmanuel.dev', label: 'Email' },
+    {
+      icon: Github,
+      href: "https://github.com/manuelduarte077",
+      label: "GitHub",
+    },
+    {
+      icon: Twitter,
+      href: "https://twitter.com/manuelduarte077",
+      label: "Twitter",
+    },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/manuelduarte077",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "mailto:hello@donmanuel.dev", label: "Email" },
   ];
 
   return (
-    <footer id="contact" className="py-20 px-6 border-t border-border-main scroll-mt-20">
+    <footer
+      id="contact"
+      className="py-20 px-6 border-t border-border-main scroll-mt-20"
+    >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
         <div>
           <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tighter mb-4">
-            {t('footer.title')}
+            {t("footer.title")}
           </h2>
-          <p className="text-muted">© {new Date().getFullYear()} Don Manuel. {t('footer.rights')}</p>
+          <p className="text-muted">
+            © {new Date().getFullYear()} Don Manuel. {t("footer.rights")}
+          </p>
         </div>
 
         <div className="flex flex-col items-center md:items-end gap-8">

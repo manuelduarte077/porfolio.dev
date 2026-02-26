@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
-import { useLanguage } from '../context/LanguageContext';
+import { motion } from "motion/react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function About() {
   const { t } = useLanguage();
@@ -14,7 +14,7 @@ export default function About() {
           className="flex items-baseline justify-between mb-16 border-b border-border-main pb-8"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter">
-            {t('about.title')}
+            {t("about.title")}
           </h2>
           <span className="text-xs font-mono text-muted">/004</span>
         </motion.div>
@@ -49,27 +49,31 @@ export default function About() {
           >
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-display font-semibold tracking-tight">
-                {t('about.greeting')}
+                {t("about.greeting")}
               </h3>
               <p className="text-base md:text-lg text-muted leading-relaxed">
-                {t('about.p1')}
+                {t("about.p1")}
               </p>
               <p className="text-base md:text-lg text-muted leading-relaxed">
-                {t('about.p2')}
+                {t("about.p2")}
               </p>
             </div>
 
             <div className="pt-8 border-t border-border-main">
-              <h4 className="text-xs uppercase tracking-widest text-muted mb-6">{t('about.aspirations')}</h4>
+              <h4 className="text-xs uppercase tracking-widest text-muted mb-6">
+                {t("about.aspirations")}
+              </h4>
               <ul className="space-y-4">
                 {[
-                  t('about.a1'),
-                  t('about.a2'),
-                  t('about.a3'),
-                  t('about.a4')
+                  t("about.a1"),
+                  t("about.a2"),
+                  t("about.a3"),
+                  t("about.a4"),
                 ].map((aspiration, i) => (
                   <li key={i} className="flex gap-4 items-start">
-                    <span className="text-accent font-mono text-sm">0{i + 1}.</span>
+                    <span className="text-accent font-mono text-sm">
+                      0{i + 1}.
+                    </span>
                     <p className="text-muted">{aspiration}</p>
                   </li>
                 ))}

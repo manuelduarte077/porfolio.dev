@@ -7,7 +7,7 @@ export interface Project {
   tags: string[];
   link: string;
   repoLink?: string;
-  type: 'iOS' | 'Android' | 'Web' | 'Cross-platform' | 'Multiplatform';
+  type: "iOS" | "Android" | "Web" | "Cross-platform" | "Multiplatform";
 }
 
 export interface Article {

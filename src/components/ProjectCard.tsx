@@ -1,7 +1,7 @@
-import { motion } from 'motion/react';
-import { ExternalLink, Github } from 'lucide-react';
-import { Project } from '../types';
-import { useLanguage } from '../context/LanguageContext';
+import { motion } from "motion/react";
+import { ExternalLink, Github } from "lucide-react";
+import { Project } from "../types";
+import { useLanguage } from "../context/LanguageContext";
 
 interface ProjectCardProps {
   project: Project;
@@ -10,7 +10,11 @@ interface ProjectCardProps {
   key?: string;
 }
 
-export default function ProjectCard({ project, index, onClick }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  index,
+  onClick,
+}: ProjectCardProps) {
   const { t } = useLanguage();
 
   return (
@@ -23,50 +27,51 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
       viewport={{ once: true }}
       onClick={() => onClick(project)}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           onClick(project);
         }
       }}
-      aria-label={`${t('project.view')} ${project.title}`}
-      transition={{ 
+      aria-label={`${t("project.view")} ${project.title}`}
+      transition={{
         delay: index * 0.1,
         type: "spring",
         stiffness: 300,
-        damping: 20
+        damping: 20,
       }}
       className="group relative border-b border-border-main py-12 flex flex-col md:flex-row gap-8 md:items-center justify-between hover:bg-accent/2 px-4 transition-all duration-500 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
     >
       <div className="flex-1">
         <div className="flex items-center gap-3 mb-2">
-          <motion.span 
+          <motion.span
             whileHover={{ scale: 1.05 }}
             className="text-[10px] uppercase tracking-widest text-muted border border-border-main px-2 py-0.5 rounded-full"
           >
             {project.type}
           </motion.span>
           <div className="flex gap-2">
-            {project.tags.map(tag => (
-              <span key={tag} className="text-[10px] text-muted/60 uppercase tracking-tighter">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-[10px] text-muted/60 uppercase tracking-tighter"
+              >
                 #{tag}
               </span>
             ))}
           </div>
         </div>
-        <motion.h3 
-          className="text-3xl md:text-4xl font-display font-medium tracking-tight"
-        >
+        <motion.h3 className="text-3xl md:text-4xl font-display font-medium tracking-tight">
           {project.title}
         </motion.h3>
         <p className="text-muted mt-2 max-w-xl text-sm md:text-base">
           {t(`project.${project.id}.description`)}
         </p>
-        
+
         {project.technologies && (
           <div className="flex flex-wrap gap-2 mt-4">
-            {project.technologies.map(tech => (
-              <span 
-                key={tech} 
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
                 className="text-[10px] font-mono bg-accent/5 text-accent/70 px-2 py-0.5 rounded border border-accent/10 group-hover:border-accent/30 transition-colors"
               >
                 {tech}
@@ -75,7 +80,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
           </div>
         )}
       </div>
-      
+
       <div className="flex items-center gap-6">
         {project.repoLink && (
           <a
@@ -90,10 +95,8 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
             Repo
           </a>
         )}
-        <div 
-          className="flex items-center gap-2 text-xs uppercase tracking-widest font-semibold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all"
-        >
-          {t('project.view')} <ExternalLink size={14} />
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest font-semibold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+          {t("project.view")} <ExternalLink size={14} />
         </div>
       </div>
     </motion.div>

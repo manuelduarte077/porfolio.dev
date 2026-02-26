@@ -1,7 +1,7 @@
-import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
-import { Article } from '../types';
-import { useLanguage } from '../context/LanguageContext';
+import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import { Article } from "../types";
+import { useLanguage } from "../context/LanguageContext";
 
 interface ArticleCardProps {
   article: Article;
@@ -27,7 +27,10 @@ export default function ArticleCard({ article, index }: ArticleCardProps) {
         <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
           {article.date} • {article.readTime}
         </span>
-        <ArrowRight size={18} className="text-muted group-hover:text-accent group-hover:translate-x-1 transition-all" />
+        <ArrowRight
+          size={18}
+          className="text-muted group-hover:text-accent group-hover:translate-x-1 transition-all"
+        />
       </div>
       <h3 className="text-xl font-display font-semibold mb-3 leading-tight">
         {t(`article.${article.id}.title`)}

@@ -1,17 +1,17 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProjectCard from './components/ProjectCard';
-import ArticleCard from './components/ArticleCard';
-import About from './components/About';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import ProjectModal from './components/ProjectModal';
-import Footer from './components/Footer';
-import { PROJECTS, ARTICLES } from './constants';
-import { motion } from 'motion/react';
-import { useState } from 'react';
-import { Project } from './types';
-import { useLanguage } from './context/LanguageContext';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import ProjectCard from "./components/ProjectCard";
+import ArticleCard from "./components/ArticleCard";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import ProjectModal from "./components/ProjectModal";
+import Footer from "./components/Footer";
+import { PROJECTS, ARTICLES } from "./constants";
+import { motion } from "motion/react";
+import { useState } from "react";
+import { Project } from "./types";
+import { useLanguage } from "./context/LanguageContext";
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -20,31 +20,31 @@ export default function App() {
   return (
     <div className="bg-bg min-h-screen">
       <Navbar />
-      
+
       <main>
         <Hero />
 
         {/* Projects Section */}
         <section id="projects" className="py-32 px-6 scroll-mt-20">
           <div className="max-w-7xl mx-auto">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="flex items-baseline justify-between mb-16 border-b border-border-main pb-8"
             >
               <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter">
-                {t('projects.title')}
+                {t("projects.title")}
               </h2>
               <span className="text-xs font-mono text-muted">/001</span>
             </motion.div>
 
             <div className="flex flex-col">
               {PROJECTS.map((project, i) => (
-                <ProjectCard 
-                  key={project.id} 
-                  project={project} 
-                  index={i} 
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={i}
                   onClick={setSelectedProject}
                 />
               ))}
@@ -86,12 +86,11 @@ export default function App() {
       </main>
 
       <Footer />
-      
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
       />
     </div>
   );
 }
-

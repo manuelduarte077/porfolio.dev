@@ -1,8 +1,14 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { en } from '../locales/en';
-import { es } from '../locales/es';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
+import { en } from "../locales/en";
+import { es } from "../locales/es";
 
-type Language = 'en' | 'es';
+type Language = "en" | "es";
 
 interface LanguageContextType {
   language: Language;
@@ -12,21 +18,25 @@ interface LanguageContextType {
 
 const translations = { en, es };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined,
+);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem('language');
-    return (saved as Language) || 'es';
+    const saved = localStorage.getItem("language");
+    return (saved as Language) || "es";
   });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('language', lang);
+    localStorage.setItem("language", lang);
   };
 
   const t = (key: string) => {
-    return translations[language][key as keyof typeof translations['en']] || key;
+    return (
+      translations[language][key as keyof (typeof translations)["en"]] || key
+    );
   };
 
   return (
@@ -39,7 +49,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
 }
