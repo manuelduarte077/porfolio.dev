@@ -37,7 +37,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
       - name: Build
-        run: vercel build
+        run: vercel build ${{ github.ref == 'refs/heads/main' && '--prod' || '' }}
 
       - name: Deploy
         run: vercel deploy --prebuilt ${{ github.ref == 'refs/heads/main' && '--prod' || '' }}

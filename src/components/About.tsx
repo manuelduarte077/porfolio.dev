@@ -28,7 +28,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden glass group">
+            <div className="relative aspect-4/5 rounded-2xl overflow-hidden glass group">
               <img
                 src="https://picsum.photos/seed/manuel-dev/800/1000"
                 alt="Don Manuel Professional Portrait"
