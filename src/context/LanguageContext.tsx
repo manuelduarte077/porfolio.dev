@@ -1,14 +1,19 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 import { en } from "../locales/en";
 import { es } from "../locales/es";
 
 type Language = "en" | "es";
+
+const LANGUAGES: Language[] = ["en", "es"];
+
+function isLanguage(value: string | null): value is Language {
+  return value !== null && LANGUAGES.includes(value as Language);
+}
+
+function getStoredLanguage(): Language {
+  const saved = localStorage.getItem("language");
+  return isLanguage(saved) ? saved : "en";
+}
 
 interface LanguageContextType {
   language: Language;
@@ -23,10 +28,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem("language");
-    return (saved as Language) || "en";
-  });
+  const [language, setLanguageState] = useState<Language>(getStoredLanguage);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
