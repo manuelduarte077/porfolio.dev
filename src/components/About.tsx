@@ -29,7 +29,7 @@ export default function About() {
           >
             <div className="relative aspect-4/5 rounded-2xl overflow-hidden glass group">
               <img
-                src="https://picsum.photos/seed/manuel-dev/800/1000"
+                src="/profile.png"
                 alt="Don Manuel Professional Portrait"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
