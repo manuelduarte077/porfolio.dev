@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ExternalLink, Github } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../context/LanguageContext";
+import { trackCustomEvent } from "../utils/vexo";
 
 interface ProjectCardProps {
   project: Project;
@@ -25,10 +26,22 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ x: 10 }}
       viewport={{ once: true }}
-      onClick={() => onClick(project)}
+      onClick={() => {
+        trackCustomEvent("project-viewed", {
+          projectId: project.id,
+          projectTitle: project.title,
+          type: project.type,
+        });
+        onClick(project);
+      }}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
+          trackCustomEvent("project-viewed", {
+            projectId: project.id,
+            projectTitle: project.title,
+            type: project.type,
+          });
           onClick(project);
         }
       }}
@@ -87,7 +100,13 @@ export default function ProjectCard({
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackCustomEvent("project-link-live", {
+                projectId: project.id,
+                projectTitle: project.title,
+              });
+            }}
             className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-muted hover:text-accent transition-colors border border-border-main px-3 py-1.5 rounded-full hover:border-accent/30"
             aria-label={`${project.title} ${t("modal.live")}`}
           >
@@ -100,7 +119,13 @@ export default function ProjectCard({
             href={project.repoLink}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackCustomEvent("project-link-repo", {
+                projectId: project.id,
+                projectTitle: project.title,
+              });
+            }}
             className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-muted hover:text-accent transition-colors border border-border-main px-3 py-1.5 rounded-full hover:border-accent/30"
             aria-label={`${project.title} GitHub Repository`}
           >

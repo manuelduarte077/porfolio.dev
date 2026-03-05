@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowDownRight, FileText } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { trackCustomEvent } from "../utils/vexo";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -41,6 +42,7 @@ export default function Hero() {
               <a
                 href="/CV-Manuel-Duarte.pdf"
                 download="CV-Manuel-Duarte.pdf"
+                onClick={() => trackCustomEvent("cv-download")}
                 className="flex items-center gap-2 px-6 py-3 bg-accent text-bg rounded-full text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-opacity"
               >
                 <FileText size={16} />
@@ -49,6 +51,7 @@ export default function Hero() {
 
               <a
                 href="#projects"
+                onClick={() => trackCustomEvent("cta-explore-projects")}
                 className="group flex items-center gap-2 text-sm font-medium uppercase tracking-widest hover:text-muted transition-colors self-center"
               >
                 {t("hero.explore")}
