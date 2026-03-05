@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { X, ExternalLink, Github, Code2 } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../context/LanguageContext";
+import { trackCustomEvent } from "../utils/vexo";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -115,6 +116,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() =>
+                              trackCustomEvent("project-link-live", {
+                                projectId: project.id,
+                                projectTitle: project.title,
+                              })
+                            }
                             className="flex items-center justify-between p-4 rounded-xl font-semibold bg-accent text-bg hover:opacity-90 transition-opacity"
                           >
                             {t("modal.live")}{" "}
@@ -127,6 +134,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             href={project.repoLink}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() =>
+                              trackCustomEvent("project-link-repo", {
+                                projectId: project.id,
+                                projectTitle: project.title,
+                              })
+                            }
                             className="flex items-center justify-between p-4 rounded-xl bg-surface border border-border-main hover:bg-accent/10 text-accent transition-colors font-semibold"
                           >
                             {t("modal.repo")}{" "}
