@@ -2,7 +2,8 @@ import { motion } from "motion/react";
 import { ExternalLink, Github } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../context/LanguageContext";
-import { trackCustomEvent } from "../utils/vexo";
+import { projectDescriptionKey } from "../locales/keys";
+import { track } from "../lib/analytics";
 import { buttonVariants, cn } from "./ui";
 
 interface ProjectCardProps {
@@ -28,7 +29,7 @@ export default function ProjectCard({
       whileHover={{ x: 10 }}
       viewport={{ once: true }}
       onClick={() => {
-        trackCustomEvent("project-viewed", {
+        track("project-viewed", {
           projectId: project.id,
           projectTitle: project.title,
           type: project.type,
@@ -38,7 +39,7 @@ export default function ProjectCard({
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          trackCustomEvent("project-viewed", {
+          track("project-viewed", {
             projectId: project.id,
             projectTitle: project.title,
             type: project.type,
@@ -77,8 +78,8 @@ export default function ProjectCard({
         <motion.h3 className="text-3xl md:text-4xl font-display font-medium tracking-tight">
           {project.title}
         </motion.h3>
-        <p className="text-muted mt-2 max-w-xl text-sm md:text-base">
-          {t(`project.${project.id}.description`)}
+        <p className="mt-2 max-w-xl text-sm text-muted md:text-base">
+          {t(projectDescriptionKey(project.id))}
         </p>
 
         {project.technologies && (
@@ -103,14 +104,14 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             onClick={(e) => {
               e.stopPropagation();
-              trackCustomEvent("project-link-live", {
+              track("project-link-live", {
                 projectId: project.id,
                 projectTitle: project.title,
               });
             }}
             className={cn(
               buttonVariants({ variant: "outline", size: "sm" }),
-              "!min-h-0 rounded-full border-border-main py-1.5 font-bold text-muted no-underline hover:border-accent/30 hover:text-accent",
+              "min-h-0! rounded-full border-border-main py-1.5 font-bold text-muted no-underline hover:border-accent/30 hover:text-accent",
             )}
             aria-label={`${project.title} ${t("modal.live")}`}
           >
@@ -125,14 +126,14 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             onClick={(e) => {
               e.stopPropagation();
-              trackCustomEvent("project-link-repo", {
+              track("project-link-repo", {
                 projectId: project.id,
                 projectTitle: project.title,
               });
             }}
             className={cn(
               buttonVariants({ variant: "outline", size: "sm" }),
-              "!min-h-0 rounded-full border-border-main py-1.5 font-bold text-muted no-underline hover:border-accent/30 hover:text-accent",
+              "min-h-0! rounded-full border-border-main py-1.5 font-bold text-muted no-underline hover:border-accent/30 hover:text-accent",
             )}
             aria-label={`${project.title} GitHub Repository`}
           >

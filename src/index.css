@@ -40,9 +40,9 @@
 }
 
 .glass {
-  @apply bg-surface/50 backdrop-blur-md border border-[var(--glass-border)];
+  @apply bg-surface/50 backdrop-blur-md border border-(--glass-border);
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent/50;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-accent to-accent/50;
 }

@@ -56,7 +56,7 @@ export default function Navbar() {
               size="sm"
               onClick={toggleLanguage}
               className={cn(
-                "!min-h-9 gap-2 text-xs font-bold text-muted hover:text-accent",
+                "min-h-9! gap-2 text-xs font-bold text-muted hover:text-accent",
               )}
               aria-label="Toggle language"
               leftIcon={<Languages size={16} />}
@@ -73,7 +73,7 @@ export default function Navbar() {
             variant="ghost"
             size="sm"
             onClick={toggleLanguage}
-            className="!h-10 !min-h-0 !px-2 text-muted hover:text-accent"
+            className="h-10! min-h-0! px-2! text-muted hover:text-accent"
             aria-label="Toggle language"
           >
             <span className="text-xs font-bold uppercase tracking-widest">
@@ -86,7 +86,7 @@ export default function Navbar() {
             variant="ghost"
             size="sm"
             onClick={() => setIsOpen(!isOpen)}
-            className="!h-10 !w-10 !min-h-0 !p-0 text-accent"
+            className="h-10! w-10! min-h-0! p-0! text-accent"
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"

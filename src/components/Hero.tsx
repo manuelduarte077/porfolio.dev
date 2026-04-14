@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowDownRight, FileText } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import { trackCustomEvent } from "../utils/vexo";
+import { track } from "../lib/analytics";
 import { buttonVariants, cn } from "./ui";
 
 export default function Hero() {
@@ -51,7 +51,7 @@ export default function Hero() {
               <a
                 href="/CV-Manuel-Duarte.pdf"
                 download="CV-Manuel-Duarte.pdf"
-                onClick={() => trackCustomEvent("cv-download")}
+                onClick={() => track("cv-download")}
                 className={cn(
                   buttonVariants({ variant: "primary", size: "md" }),
                   "inline-flex gap-2 no-underline",
@@ -63,10 +63,10 @@ export default function Hero() {
 
               <a
                 href="#projects"
-                onClick={() => trackCustomEvent("cta-explore-projects")}
+                onClick={() => track("cta-explore-projects")}
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "sm" }),
-                  "group inline-flex gap-2 self-center !min-h-0 font-medium text-muted hover:text-accent",
+                  "group inline-flex gap-2 self-center min-h-0! font-medium text-muted hover:text-accent",
                 )}
               >
                 {t("hero.explore")}

@@ -7,6 +7,7 @@ import {
 } from "react";
 import { en } from "../locales/en";
 import { es } from "../locales/es";
+import type { TranslationKey } from "../locales/types";
 
 type Language = "en" | "es";
 
@@ -24,7 +25,7 @@ function getStoredLanguage(): Language {
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: TranslationKey) => string;
 }
 
 const translations = { en, es };
@@ -45,10 +46,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("language", lang);
   };
 
-  const t = (key: string) => {
-    return (
-      translations[language][key as keyof (typeof translations)["en"]] || key
-    );
+  const t = (key: TranslationKey) => {
+    const table = translations[language];
+    return table[key] ?? key;
   };
 
   return (

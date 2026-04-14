@@ -1,24 +1,16 @@
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
+import { experienceDescriptionKey } from "../locales/keys";
 import { EXPERIENCES } from "../constants";
+import { SectionHeader } from "./SectionHeader";
 
 export default function Experience() {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="py-32 px-6 scroll-mt-20">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex items-baseline justify-between mb-16 border-b border-border-main pb-8"
-        >
-          <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter uppercase">
-            {t("experience.title")}
-          </h2>
-          <span className="text-xs font-mono text-muted">/002</span>
-        </motion.div>
+    <section id="experience" className="scroll-mt-20 px-6 py-32">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader titleKey="experience.title" index="/002" uppercase />
 
         <div className="space-y-12">
           {EXPERIENCES.map((exp, i) => (
@@ -44,8 +36,8 @@ export default function Experience() {
                     {exp.company}
                   </span>
                 </div>
-                <p className="text-muted text-base md:text-lg leading-relaxed mb-6">
-                  {t(`experience.${exp.id}.description`)}
+                <p className="mb-6 text-base leading-relaxed text-muted md:text-lg">
+                  {t(experienceDescriptionKey(exp.id))}
                 </p>
                 {exp.technologies && (
                   <div className="flex flex-wrap gap-2">

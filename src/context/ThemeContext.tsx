@@ -2,6 +2,10 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
+function isTheme(value: string | null): value is Theme {
+  return value === "light" || value === "dark";
+}
+
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
@@ -11,14 +15,16 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("theme") as Theme;
-      if (saved) return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+    if (typeof window === "undefined") {
+      return "light";
     }
-    return "dark";
+    const saved = localStorage.getItem("theme");
+    if (isTheme(saved)) {
+      return saved;
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   });
 
   useEffect(() => {

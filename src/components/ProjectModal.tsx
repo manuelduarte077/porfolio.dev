@@ -2,7 +2,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { X, ExternalLink, Github, Code2 } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../context/LanguageContext";
-import { trackCustomEvent } from "../utils/vexo";
+import { projectLongDescriptionKey } from "../locales/keys";
+import { track } from "../lib/analytics";
 import { Button, buttonVariants, cn } from "./ui";
 
 interface ProjectModalProps {
@@ -47,7 +48,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               variant="ghost"
               size="sm"
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 !h-11 !w-11 !min-h-0 shrink-0 !rounded-full !p-0 bg-bg/50 backdrop-blur-sm hover:bg-accent/10 md:top-6 md:right-6 md:bg-transparent md:backdrop-blur-none"
+              className="absolute top-4 right-4 z-10 h-11! w-11! min-h-0! shrink-0 rounded-full! p-0! bg-bg/50 backdrop-blur-sm hover:bg-accent/10 md:top-6 md:right-6 md:bg-transparent md:backdrop-blur-none"
               aria-label="Close modal"
               autoFocus
             >
@@ -82,8 +83,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <h3 className="text-xs uppercase tracking-widest text-muted mb-4 font-bold">
                       {t("modal.overview")}
                     </h3>
-                    <p className="text-lg text-muted leading-relaxed">
-                      {t(`project.${project.id}.longDescription`)}
+                    <p className="text-lg leading-relaxed text-muted">
+                      {t(projectLongDescriptionKey(project.id))}
                     </p>
                   </div>
 
@@ -121,7 +122,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() =>
-                              trackCustomEvent("project-link-live", {
+                              track("project-link-live", {
                                 projectId: project.id,
                                 projectTitle: project.title,
                               })
@@ -132,7 +133,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 size: "lg",
                                 fullWidth: true,
                               }),
-                              "!rounded-xl justify-between gap-3 no-underline font-semibold",
+                              "rounded-xl! justify-between gap-3 no-underline font-semibold",
                             )}
                           >
                             {t("modal.live")}
@@ -150,7 +151,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() =>
-                              trackCustomEvent("project-link-repo", {
+                              track("project-link-repo", {
                                 projectId: project.id,
                                 projectTitle: project.title,
                               })
@@ -161,7 +162,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 size: "lg",
                                 fullWidth: true,
                               }),
-                              "!rounded-xl justify-between gap-3 no-underline font-semibold",
+                              "rounded-xl! justify-between gap-3 no-underline font-semibold",
                             )}
                           >
                             {t("modal.repo")}

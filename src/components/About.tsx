@@ -1,25 +1,16 @@
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
+import { SectionHeader } from "./SectionHeader";
 
 export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-32 px-6 scroll-mt-20">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex items-baseline justify-between mb-16 border-b border-border-main pb-8"
-        >
-          <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tighter">
-            {t("about.title")}
-          </h2>
-          <span className="text-xs font-mono text-muted">/003</span>
-        </motion.div>
+    <section id="about" className="scroll-mt-20 px-6 py-32">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader titleKey="about.title" index="/003" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

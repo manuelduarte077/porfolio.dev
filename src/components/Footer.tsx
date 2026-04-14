@@ -1,6 +1,6 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import { trackCustomEvent } from "../utils/vexo";
+import { track } from "../lib/analytics";
 import { buttonVariants, cn } from "./ui";
 
 export default function Footer() {
@@ -49,16 +49,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 onClick={() =>
                   item.label === "Email"
-                    ? trackCustomEvent("contact-email-click", {
-                        source: "footer",
-                      })
-                    : trackCustomEvent("contact-social-click", {
+                    ? track("contact-email-click", { source: "footer" })
+                    : track("contact-social-click", {
                         platform: item.label,
                       })
                 }
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "sm" }),
-                  "!h-11 !w-11 !min-h-0 !rounded-full !p-0 text-muted hover:text-accent",
+                  "h-11! w-11! min-h-0! rounded-full! p-0! text-muted hover:text-accent",
                 )}
                 aria-label={item.label}
               >
@@ -68,9 +66,7 @@ export default function Footer() {
           </div>
           <a
             href="mailto:hello@donmanuel.dev"
-            onClick={() =>
-              trackCustomEvent("contact-email-click", { source: "footer" })
-            }
+            onClick={() => track("contact-email-click", { source: "footer" })}
             className="text-lg font-medium underline underline-offset-8 decoration-accent/20 hover:decoration-accent transition-all"
           >
             hello@donmanuel.dev
