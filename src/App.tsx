@@ -1,58 +1,60 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import ProjectCard from "./components/ProjectCard";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import ProjectModal from "./components/ProjectModal";
-import Footer from "./components/Footer";
-import { SectionHeader } from "./components/SectionHeader";
-import { PROJECTS } from "./constants";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Project } from "@/types";
-import { SpeedInsights } from "@vercel/speed-insights/react";
+
+const ProjectsSection = lazy(() => import("./components/ProjectsSection"));
+const Experience = lazy(() => import("./components/Experience"));
+const About = lazy(() => import("./components/About"));
+const Skills = lazy(() => import("./components/Skills"));
+const Footer = lazy(() => import("./components/Footer"));
+const ProjectModal = lazy(() => import("./components/ProjectModal"));
+const SpeedInsights = lazy(() =>
+  import("@vercel/speed-insights/react").then((m) => ({
+    default: m.SpeedInsights,
+  })),
+);
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <div className="bg-bg min-h-screen overflow-x-hidden">
-      <SpeedInsights />
+      <Suspense fallback={null}>
+        <SpeedInsights />
+      </Suspense>
       <Navbar />
 
       <main>
         <Hero />
 
-        <section id="projects" className="scroll-mt-20 px-6 py-32">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeader titleKey="projects.title" index="/001" />
+        <Suspense fallback={null}>
+          <ProjectsSection onProjectClick={setSelectedProject} />
+        </Suspense>
 
-            <div className="flex flex-col">
-              {PROJECTS.map((project, i) => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  index={i}
-                  onClick={setSelectedProject}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <Suspense fallback={null}>
+          <Experience />
+        </Suspense>
 
-        <Experience />
+        <Suspense fallback={null}>
+          <About />
+        </Suspense>
 
-        <About />
-
-        <Skills />
+        <Suspense fallback={null}>
+          <Skills />
+        </Suspense>
       </main>
 
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
 
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+      <Suspense fallback={null}>
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      </Suspense>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import {
   useContext,
   useState,
   useLayoutEffect,
+  startTransition,
   ReactNode,
 } from "react";
 import { en } from "../locales/en";
@@ -42,7 +43,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [language]);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    startTransition(() => {
+      setLanguageState(lang);
+    });
     localStorage.setItem("language", lang);
   };
 

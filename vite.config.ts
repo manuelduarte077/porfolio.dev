@@ -14,5 +14,22 @@ export default defineConfig(() => {
     server: {
       hmr: process.env.DISABLE_HMR !== "true",
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes("node_modules/react-dom") || id.includes("node_modules/react/")) {
+              return "react-vendor";
+            }
+            if (id.includes("node_modules/motion")) {
+              return "motion";
+            }
+            if (id.includes("node_modules/lucide-react")) {
+              return "lucide";
+            }
+          },
+        },
+      },
+    },
   };
 });
