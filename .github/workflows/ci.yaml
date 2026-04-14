@@ -1,34 +1,90 @@
-name: CI & Format Check
+name: CI & Deploy
 
 on:
   push:
     branches: ["**"]
   pull_request:
     branches: ["**"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
-  check:
+  verify:
+    name: Format, lint, test & build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
+      - name: Setup pnpm and install
+        uses: ./.github/actions/setup-pnpm
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "pnpm"
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Format check
+      - name: Prettier
         run: pnpm format:check
 
-      - name: Lint
+      - name: TypeScript
         run: pnpm lint
 
-      - name: Build
+      - name: ESLint
+        run: pnpm lint:eslint
+
+      - name: Tests
+        run: pnpm test
+
+      - name: Production build
         run: pnpm build
+
+  deploy:
+    name: Vercel (pull, build, deploy)
+    needs: verify
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event_name == 'pull_request' && github.base_ref == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm and install
+        uses: ./.github/actions/setup-pnpm
+
+      - name: Install Vercel CLI
+        run: pnpm add -g vercel@latest
+
+      - name: Derive Vercel environment
+        id: vercel_env
+        shell: bash
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "target=production" >> "$GITHUB_OUTPUT"
+            echo "prod_flag=--prod" >> "$GITHUB_OUTPUT"
+          else
+            echo "target=preview" >> "$GITHUB_OUTPUT"
+            echo "prod_flag=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Pull Vercel environment
+        run: vercel pull --yes --environment=${{ steps.vercel_env.outputs.target }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build (Vercel)
+        run: vercel build ${{ steps.vercel_env.outputs.prod_flag }}
+
+      - name: Deploy (prebuilt)
+        run: vercel deploy --prebuilt ${{ steps.vercel_env.outputs.prod_flag }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
