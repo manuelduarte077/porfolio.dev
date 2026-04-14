@@ -3,6 +3,7 @@ import { Menu, X, Languages } from "lucide-react";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { useLanguage } from "../context/LanguageContext";
+import { Button, cn } from "./ui";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,38 +50,53 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4 border-l border-border-main pl-8">
-            <button
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
               onClick={toggleLanguage}
-              className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted hover:text-accent transition-colors"
+              className={cn(
+                "!min-h-9 gap-2 text-xs font-bold text-muted hover:text-accent",
+              )}
               aria-label="Toggle language"
+              leftIcon={<Languages size={16} />}
             >
-              <Languages size={16} />
               {language === "en" ? "ES" : "EN"}
-            </button>
+            </Button>
             <ThemeToggle />
           </div>
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
-          <button
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
             onClick={toggleLanguage}
-            className="p-2 text-muted hover:text-accent transition-colors"
+            className="!h-10 !min-h-0 !px-2 text-muted hover:text-accent"
             aria-label="Toggle language"
           >
             <span className="text-xs font-bold uppercase tracking-widest">
               {language === "en" ? "ES" : "EN"}
             </span>
-          </button>
+          </Button>
           <ThemeToggle />
-          <button
-            className="text-accent"
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
             onClick={() => setIsOpen(!isOpen)}
+            className="!h-10 !w-10 !min-h-0 !p-0 text-accent"
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {isOpen ? (
+              <X size={24} aria-hidden />
+            ) : (
+              <Menu size={24} aria-hidden />
+            )}
+          </Button>
         </div>
       </div>
 

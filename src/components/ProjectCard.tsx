@@ -3,6 +3,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../context/LanguageContext";
 import { trackCustomEvent } from "../utils/vexo";
+import { buttonVariants, cn } from "./ui";
 
 interface ProjectCardProps {
   project: Project;
@@ -107,10 +108,13 @@ export default function ProjectCard({
                 projectTitle: project.title,
               });
             }}
-            className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-muted hover:text-accent transition-colors border border-border-main px-3 py-1.5 rounded-full hover:border-accent/30"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "sm" }),
+              "!min-h-0 rounded-full border-border-main py-1.5 font-bold text-muted no-underline hover:border-accent/30 hover:text-accent",
+            )}
             aria-label={`${project.title} ${t("modal.live")}`}
           >
-            <ExternalLink size={16} />
+            <ExternalLink size={16} className="shrink-0" aria-hidden />
             {t("modal.live")}
           </a>
         )}
@@ -126,10 +130,13 @@ export default function ProjectCard({
                 projectTitle: project.title,
               });
             }}
-            className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-muted hover:text-accent transition-colors border border-border-main px-3 py-1.5 rounded-full hover:border-accent/30"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "sm" }),
+              "!min-h-0 rounded-full border-border-main py-1.5 font-bold text-muted no-underline hover:border-accent/30 hover:text-accent",
+            )}
             aria-label={`${project.title} GitHub Repository`}
           >
-            <Github size={16} />
+            <Github size={16} className="shrink-0" aria-hidden />
             {t("modal.repo")}
           </a>
         )}

@@ -1,6 +1,7 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { trackCustomEvent } from "../utils/vexo";
+import { buttonVariants, cn } from "./ui";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -55,10 +56,13 @@ export default function Footer() {
                         platform: item.label,
                       })
                 }
-                className="text-muted hover:text-accent transition-colors"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "sm" }),
+                  "!h-11 !w-11 !min-h-0 !rounded-full !p-0 text-muted hover:text-accent",
+                )}
                 aria-label={item.label}
               >
-                <item.icon size={24} />
+                <item.icon size={22} className="shrink-0" aria-hidden />
               </a>
             ))}
           </div>

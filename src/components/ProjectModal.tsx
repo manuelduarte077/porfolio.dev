@@ -3,6 +3,7 @@ import { X, ExternalLink, Github, Code2 } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../context/LanguageContext";
 import { trackCustomEvent } from "../utils/vexo";
+import { Button, buttonVariants, cn } from "./ui";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -41,14 +42,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-surface border border-border-main rounded-2xl md:rounded-3xl shadow-2xl focus:outline-none text-accent"
             tabIndex={-1}
           >
-            <button
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
               onClick={onClose}
-              className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-full bg-bg/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none hover:bg-accent/10 text-muted hover:text-accent transition-colors z-10 focus-visible:ring-2 focus-visible:ring-accent"
+              className="absolute top-4 right-4 z-10 !h-11 !w-11 !min-h-0 shrink-0 !rounded-full !p-0 bg-bg/50 backdrop-blur-sm hover:bg-accent/10 md:top-6 md:right-6 md:bg-transparent md:backdrop-blur-none"
               aria-label="Close modal"
               autoFocus
             >
-              <X size={24} />
-            </button>
+              <X size={24} className="text-muted" aria-hidden />
+            </Button>
 
             <div className="p-6 md:p-12">
               <div className="flex flex-wrap items-center gap-3 mb-4 md:mb-6">
@@ -122,10 +126,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 projectTitle: project.title,
                               })
                             }
-                            className="flex items-center justify-between p-4 rounded-xl font-semibold bg-accent text-bg hover:opacity-90 transition-opacity"
+                            className={cn(
+                              buttonVariants({
+                                variant: "primary",
+                                size: "lg",
+                                fullWidth: true,
+                              }),
+                              "!rounded-xl justify-between gap-3 no-underline font-semibold",
+                            )}
                           >
-                            {t("modal.live")}{" "}
-                            <ExternalLink size={18} className="shrink-0" />
+                            {t("modal.live")}
+                            <ExternalLink
+                              size={18}
+                              className="shrink-0"
+                              aria-hidden
+                            />
                           </a>
                         )}
 
@@ -140,10 +155,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 projectTitle: project.title,
                               })
                             }
-                            className="flex items-center justify-between p-4 rounded-xl bg-surface border border-border-main hover:bg-accent/10 text-accent transition-colors font-semibold"
+                            className={cn(
+                              buttonVariants({
+                                variant: "secondary",
+                                size: "lg",
+                                fullWidth: true,
+                              }),
+                              "!rounded-xl justify-between gap-3 no-underline font-semibold",
+                            )}
                           >
-                            {t("modal.repo")}{" "}
-                            <Github size={18} className="shrink-0 text-muted" />
+                            {t("modal.repo")}
+                            <Github
+                              size={18}
+                              className="shrink-0 text-muted"
+                              aria-hidden
+                            />
                           </a>
                         )}
                       </div>

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowDownRight, FileText } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { trackCustomEvent } from "../utils/vexo";
+import { buttonVariants, cn } from "./ui";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -46,24 +47,34 @@ export default function Hero() {
               {t("hero.description")}
             </p>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap items-center gap-4 md:gap-6">
               <a
                 href="/CV-Manuel-Duarte.pdf"
                 download="CV-Manuel-Duarte.pdf"
                 onClick={() => trackCustomEvent("cv-download")}
-                className="flex items-center gap-2 px-6 py-3 bg-accent text-bg rounded-full text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-opacity"
+                className={cn(
+                  buttonVariants({ variant: "primary", size: "md" }),
+                  "inline-flex gap-2 no-underline",
+                )}
               >
-                <FileText size={16} />
+                <FileText size={16} className="shrink-0" aria-hidden />
                 {t("hero.resume")}
               </a>
 
               <a
                 href="#projects"
                 onClick={() => trackCustomEvent("cta-explore-projects")}
-                className="group flex items-center gap-2 text-sm font-medium uppercase tracking-widest hover:text-muted transition-colors self-center"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "sm" }),
+                  "group inline-flex gap-2 self-center !min-h-0 font-medium text-muted hover:text-accent",
+                )}
               >
                 {t("hero.explore")}
-                <ArrowDownRight className="group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
+                <ArrowDownRight
+                  className="shrink-0 transition-transform group-hover:translate-x-1 group-hover:translate-y-1"
+                  size={18}
+                  aria-hidden
+                />
               </a>
             </div>
           </div>
