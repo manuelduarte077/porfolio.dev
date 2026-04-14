@@ -1,7 +1,6 @@
 export const es = {
   "nav.home": "Inicio",
   "nav.projects": "Proyectos",
-  "nav.articles": "Artículos",
   "nav.about": "Sobre mí",
   "nav.experience": "Experiencia",
   "nav.skills": "Habilidades",
@@ -14,7 +13,6 @@ export const es = {
   "hero.explore": "Explorar Proyectos",
   "hero.resume": "Descargar CV",
   "projects.title": "PROYECTOS SELECCIONADOS",
-  "articles.title": "ÚLTIMOS ARTÍCULOS",
   "skills.title": "Habilidades & Stack",
   "skills.technical": "Experiencia Técnica",
   "skills.soft": "Habilidades Blandas",
@@ -59,28 +57,10 @@ export const es = {
     "La aplicación de notas esencial para mantenerte organizado y productivo.",
   "project.notyapp.longDescription":
     "NotyApp es una solución de toma de notas robusta para Android que prioriza la privacidad y el rendimiento. Permite organizar pensamientos mediante etiquetas, búsqueda avanzada y almacenamiento local seguro, con opción de respaldo en la nube.",
-  "project.lomas-club.description":
-    "Lomas Club App - Experiencia exclusiva para socios.",
-  "project.lomas-club.longDescription":
-    "Lomas Club App ofrece una experiencia digital exclusiva para los socios del club, permitiéndoles acceder a servicios, eventos y funciones de la comunidad directamente desde sus dispositivos móviles.",
   "project.tucambio.description":
     "Consulta el tipo de cambio en Nicaragua en tiempo real.",
   "project.tucambio.longDescription":
     "TuCambio es una aplicación de utilidad para nicaragüenses para consultar los tipos de cambio oficiales y paralelos del Córdoba frente al Dólar estadounidense y otras monedas, con datos históricos y calculadoras.",
-  "project.pexels-kmp.description":
-    "Navegador de imágenes multiplataforma usando la API de Pexels.",
-  "project.pexels-kmp.longDescription":
-    "Pexels KMP es una aplicación Kotlin Multiplatform que muestra imágenes de alta calidad de la API de Pexels, demostrando el poder del código compartido entre Android e iOS.",
-  "article.libros-desarrollo.title":
-    "Los 10 Mejores Libros de Desarrollo de Software",
-  "article.libros-desarrollo.description":
-    "El desarrollo de software es un campo en constante evolución, y mantenerse al día es clave.",
-  "article.learn-go.title": "Learn Go in 8 minutes",
-  "article.learn-go.description":
-    "Learning the basics of Go and how it works. A great starting language.",
-  "article.diccionario-datos.title": "¿Qué es un Diccionario de datos?",
-  "article.diccionario-datos.description":
-    "Un diccionario en Python es una colección de elementos clave-valor.",
   "skills.soft.problemSolving": "Resolución de Problemas",
   "skills.soft.teamLeadership": "Liderazgo de Equipos",
   "skills.soft.cleanArchitecture": "Arquitectura Limpia",

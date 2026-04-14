@@ -1,7 +1,6 @@
 export const en = {
   "nav.home": "Home",
   "nav.projects": "Projects",
-  "nav.articles": "Articles",
   "nav.about": "About",
   "nav.experience": "Experience",
   "nav.skills": "Skills",
@@ -14,7 +13,6 @@ export const en = {
   "hero.explore": "Explore Projects",
   "hero.resume": "Download Resume",
   "projects.title": "SELECTED PROJECTS",
-  "articles.title": "LATEST WRITING",
   "skills.title": "Skills & Stack",
   "skills.technical": "Technical Expertise",
   "skills.soft": "Soft Skills",
@@ -58,27 +56,10 @@ export const en = {
     "The essential notes application to keep you organized and productive.",
   "project.notyapp.longDescription":
     "NotyApp is a robust note-taking solution for Android that prioritizes privacy and performance. It allows organizing thoughts through tags, advanced search, and secure local storage, with a cloud backup option.",
-  "project.lomas-club.description":
-    "Lomas Club App - Exclusive experience for members.",
-  "project.lomas-club.longDescription":
-    "Lomas Club App provides an exclusive digital experience for club members, allowing them to access services, events, and community features directly from their mobile devices.",
   "project.tucambio.description":
     "Check exchange rates in Nicaragua in real-time.",
   "project.tucambio.longDescription":
     "TuCambio is a utility app for Nicaraguans to check the official and parallel exchange rates of the Cordoba against the US Dollar and other currencies, with historical data and calculators.",
-  "project.pexels-kmp.description":
-    "Multiplatform image browser using Pexels API.",
-  "project.pexels-kmp.longDescription":
-    "Pexels KMP is a Kotlin Multiplatform application that displays high-quality images from the Pexels API, demonstrating the power of shared code between Android and iOS.",
-  "article.libros-desarrollo.title": "The 10 Best Software Development Books",
-  "article.libros-desarrollo.description":
-    "Software development is a constantly evolving field, and staying up to date is key.",
-  "article.learn-go.title": "Learn Go in 8 minutes",
-  "article.learn-go.description":
-    "Learning the basics of Go and how it works. A great starting language.",
-  "article.diccionario-datos.title": "What is a Data Dictionary?",
-  "article.diccionario-datos.description":
-    "A dictionary in Python is a collection of key-value elements.",
   "skills.soft.problemSolving": "Problem Solving",
   "skills.soft.teamLeadership": "Team Leadership",
   "skills.soft.cleanArchitecture": "Clean Architecture",
