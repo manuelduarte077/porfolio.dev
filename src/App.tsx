@@ -18,7 +18,7 @@ export default function App() {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-bg min-h-screen">
+    <div className="bg-bg min-h-screen overflow-x-hidden">
       <SpeedInsights />
       <Navbar />
 

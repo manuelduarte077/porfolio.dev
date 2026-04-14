@@ -6,7 +6,7 @@ declare global {
 
 export function trackCustomEvent(
   name: string,
-  params?: Record<string, string | number | boolean>
+  params?: Record<string, string | number | boolean>,
 ): void {
   try {
     window?.vexo?.customEvent(name, params ?? {});

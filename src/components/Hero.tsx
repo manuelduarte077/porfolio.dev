@@ -20,10 +20,18 @@ export default function Hero() {
           <span className="text-xs uppercase tracking-[0.3em] text-muted mb-4 block">
             {t("hero.subtitle")}
           </span>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.9] mb-8">
-            {t("hero.title1")} <br />
-            <span className="text-muted">{t("hero.title2")}</span> <br />
-            {t("hero.title3")}
+          <h1 className="mb-8">
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-accent mb-2">
+              {t("hero.h1Name")}
+            </span>
+            <span className="block text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-muted mb-6">
+              {t("hero.h1Location")}
+            </span>
+            <span className="block text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.9]">
+              {t("hero.title1")} <br />
+              <span className="text-muted">{t("hero.title2")}</span> <br />
+              {t("hero.title3")}
+            </span>
           </h1>
         </motion.div>
 

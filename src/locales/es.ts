@@ -4,6 +4,8 @@ export const es = {
   "nav.about": "Sobre mí",
   "nav.experience": "Experiencia",
   "nav.skills": "Habilidades",
+  "hero.h1Name": "Manuel Duarte",
+  "hero.h1Location": "Managua, Nicaragua",
   "hero.title1": "CREANDO",
   "hero.title2": "EXPERIENCIAS",
   "hero.title3": "MÓVILES.",

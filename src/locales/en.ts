@@ -4,6 +4,8 @@ export const en = {
   "nav.about": "About",
   "nav.experience": "Experience",
   "nav.skills": "Skills",
+  "hero.h1Name": "Manuel Duarte",
+  "hero.h1Location": "Managua, Nicaragua",
   "hero.title1": "CRAFTING",
   "hero.title2": "MOBILE",
   "hero.title3": "EXPERIENCES.",

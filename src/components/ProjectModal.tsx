@@ -154,6 +154,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <img
                       src={`https://picsum.photos/seed/${project.id}/800/450`}
                       alt={project.title}
+                      width={800}
+                      height={450}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />

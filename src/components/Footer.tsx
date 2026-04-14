@@ -48,7 +48,9 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 onClick={() =>
                   item.label === "Email"
-                    ? trackCustomEvent("contact-email-click", { source: "footer" })
+                    ? trackCustomEvent("contact-email-click", {
+                        source: "footer",
+                      })
                     : trackCustomEvent("contact-social-click", {
                         platform: item.label,
                       })
